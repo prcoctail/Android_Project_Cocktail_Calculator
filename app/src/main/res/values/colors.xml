@@ -7,4 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="material_theme_sys_dark_on_surface_variant">#C5C6D0</color>
+    <color name="material_theme_sys_dark_outline">#8E9099</color>
+    <color name="material_theme_sys_dark_primary">#AEC6FF</color>
+    <color name="material_theme_sys_dark_error">#FFB4AB</color>
+
 </resources>
