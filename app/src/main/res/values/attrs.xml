@@ -4,5 +4,7 @@
         <attr name="searchIconEnabled" format="boolean" />
         <attr name="hintText" format="string" />
         <attr name="supportText" format="string" />
+        <attr name="inputText" format="string" />
+        <attr name="errorText" format="string" />
     </declare-styleable>
 </resources>
