@@ -5,4 +5,9 @@
         <item name="textAllCaps">false</item>
         <item name="android:textSize">14sp</item>
     </style>
+
+    <style name="FilledPrimeButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/filled_prime_button_bg</item>
+        <item name="android:textColor">@color/material_theme_sys_dark_on_primary</item>
+    </style>
 </resources>
