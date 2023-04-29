@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextInputCustomView">
+        <attr name="searchIconEnabled" format="boolean" />
+        <attr name="hintText" format="string" />
+        <attr name="supportText" format="string" />
+        <attr name="inputText" format="string" />
+        <attr name="errorText" format="string" />
+    </declare-styleable>
+</resources>

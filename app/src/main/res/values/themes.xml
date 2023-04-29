@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Theme.PartyShaker" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
@@ -13,5 +13,23 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="buttonStyle">@style/CommonButtonStyle</item>
+    </style>
+
+    <style name="TextInputLayoutAppearance">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="MyOutlinedBox" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/material_theme_sys_dark_primary</item>
+        <item name="hintTextColor">@color/material_theme_sys_dark_primary</item>
+        <item name="startIconTint">@color/material_theme_sys_dark_on_surface_variant</item>
+        <item name="endIconTint">@color/material_theme_sys_dark_on_surface_variant</item>
+        <item name="android:textColorHint">@color/material_theme_sys_dark_on_surface_variant</item>
+        <item name="helperTextTextColor">@color/material_theme_sys_dark_on_surface_variant</item>
+        <item name="android:strokeColor">@color/material_theme_sys_dark_outline</item>
+        <item name="errorIconTint">@color/material_theme_sys_dark_error</item>
+        <item name="errorTextColor">@color/material_theme_sys_dark_error</item>
+        <item name="boxStrokeErrorColor">@color/material_theme_sys_dark_error</item>
     </style>
 </resources>
