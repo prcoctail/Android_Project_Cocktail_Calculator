@@ -32,4 +32,9 @@
         <item name="android:enabled">false</item>
     </style>
 
+    <style name="FilledWrongButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/filled_wrong_button_bg</item>
+        <item name="android:textColor">@color/material_theme_sys_dark_on_error</item>
+    </style>
+
 </resources>
