@@ -26,5 +26,10 @@
         <item name="android:textColor">@color/material_theme_sys_dark_primary</item>
     </style>
 
-    
+    <style name="DisabledPrimeButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/disabled_prime_button_bg</item>
+        <item name="android:textColor">@color/disabled_button_text_color</item>
+        <item name="android:enabled">false</item>
+    </style>
+
 </resources>
