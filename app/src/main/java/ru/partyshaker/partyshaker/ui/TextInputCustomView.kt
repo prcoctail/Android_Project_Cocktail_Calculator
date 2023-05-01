@@ -8,11 +8,11 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import ru.partyshaker.partyshaker.R
 import ru.partyshaker.partyshaker.databinding.TextInputCustomViewBinding
 
-class TextInputCustomView(
+class TextInputCustomView @JvmOverloads constructor(
     context: Context,
-    attrs: AttributeSet?,
-    defStyleAttr: Int,
-    defStyleRes: Int
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0,
+    defStyleRes: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr, defStyleRes) {
 
     private val binding: TextInputCustomViewBinding
