@@ -16,7 +16,6 @@
         app:endIconMode="clear_text"
         app:errorEnabled="false"
         app:errorIconDrawable="@drawable/ic_exclamation"
-        app:helperText="Supporting text"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/TextInputLayoutAppearance"
         app:startIconDrawable="@drawable/ic_search">

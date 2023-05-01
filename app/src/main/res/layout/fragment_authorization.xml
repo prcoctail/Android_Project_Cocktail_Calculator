@@ -46,6 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             app:hintText="Электронная почта"
+            app:inputType="email"
             app:layout_constraintTop_toBottomOf="@id/tvLabel" />
 
         <ru.partyshaker.partyshaker.ui.TextInputCustomView
@@ -54,8 +55,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             app:hintText="Пароль"
-            app:layout_constraintTop_toBottomOf="@id/etEmail"
-            />
+            app:inputType="password"
+            app:layout_constraintTop_toBottomOf="@id/etEmail" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnRestorePassword"
@@ -83,9 +84,9 @@
             style="@style/FilledPrimeButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Войти"
             android:layout_marginHorizontal="20dp"
             android:layout_marginBottom="20dp"
+            android:text="Войти"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btnRestorePassword"
             app:layout_constraintVertical_bias="1" />
