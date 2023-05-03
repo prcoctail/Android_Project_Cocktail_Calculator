@@ -57,6 +57,20 @@
         app:inputType="password"
         app:layout_constraintTop_toBottomOf="@id/etPassword" />
 
+    <TextView
+        android:id="@+id/tvErrorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="16dp"
+        android:text="Такой пароль аккаунт уже есть в системе"
+        android:textColor="@color/material_theme_sys_dark_error"
+        android:visibility="gone"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etRepeat" />
+
     <CheckBox
         android:id="@+id/cbPolicy"
         android:layout_width="wrap_content"
@@ -64,7 +78,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etRepeat" />
+        app:layout_constraintTop_toBottomOf="@id/tvErrorText" />
 
     <TextView
         android:id="@+id/tvPolicyLabel"
