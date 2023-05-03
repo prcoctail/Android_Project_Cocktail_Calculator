@@ -8,7 +8,6 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.google.android.material.textfield.TextInputLayout
 import ru.partyshaker.partyshaker.R
 import ru.partyshaker.partyshaker.databinding.TextInputCustomViewBinding
 
@@ -76,33 +75,36 @@ class TextInputCustomView @JvmOverloads constructor(
         }
     }
 
-    private fun setupEmailInputState(){
+    private fun setupEmailInputState() {
         setSearchIconEnabled(false)
         binding.etInput.inputType = InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS
     }
 
-    private fun setupNumberInputState(){
+    private fun setupNumberInputState() {
         setSearchIconEnabled(false)
         binding.etInput.inputType = InputType.TYPE_CLASS_NUMBER
     }
 
     private fun setupPasswordState() {
         setSearchIconEnabled(false)
-        binding.etInput.inputType =
-            InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-        binding.etInput.transformationMethod = PasswordTransformationMethod.getInstance()
 
-        binding.textField.endIconMode = TextInputLayout.END_ICON_PASSWORD_TOGGLE
-        binding.textField.setEndIconDrawable(R.drawable.ic_password_toggle)
+        binding.apply {
+            etInput.transformationMethod = PasswordTransformationMethod.getInstance()
+            textField.setEndIconDrawable(R.drawable.ic_invisible)
 
-        binding.textField.setEndIconOnClickListener {
-            val currentTransformationMethod = binding.etInput.transformationMethod
-            if (currentTransformationMethod == PasswordTransformationMethod.getInstance()) {
-                binding.etInput.transformationMethod = HideReturnsTransformationMethod.getInstance()
-                binding.textField.setEndIconDrawable(R.drawable.ic_visible)
-            } else {
-                binding.etInput.transformationMethod = PasswordTransformationMethod.getInstance()
-                binding.textField.setEndIconDrawable(R.drawable.ic_invisible)
+            textField.setEndIconOnClickListener {
+                val currentTransformationMethod = etInput.transformationMethod
+                val cursorPosition = etInput.selectionStart
+
+                if (currentTransformationMethod == PasswordTransformationMethod.getInstance()) {
+                    etInput.transformationMethod = HideReturnsTransformationMethod.getInstance()
+                    textField.setEndIconDrawable(R.drawable.ic_visible)
+                } else {
+                    etInput.transformationMethod = PasswordTransformationMethod.getInstance()
+                    textField.setEndIconDrawable(R.drawable.ic_invisible)
+                }
+
+                etInput.setSelection(cursorPosition)
             }
         }
     }
