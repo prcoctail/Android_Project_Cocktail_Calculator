@@ -1,4 +1,4 @@
-package ru.partyshaker.partyshaker
+package ru.partyshaker.partyshaker.presentation
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
