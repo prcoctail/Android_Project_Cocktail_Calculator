@@ -7,21 +7,26 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 import ru.partyshaker.partyshaker.R
+import ru.partyshaker.partyshaker.databinding.FragmentMainBinding
 
+@AndroidEntryPoint
 class MainFragment : Fragment() {
+
+    private lateinit var binding: FragmentMainBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false)
+    ): View {
+        binding = FragmentMainBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<Button>(R.id.button_navigate_login).setOnClickListener {
+        binding.buttonNavigateLogin.setOnClickListener {
             launchLoginFragment()
         }
     }

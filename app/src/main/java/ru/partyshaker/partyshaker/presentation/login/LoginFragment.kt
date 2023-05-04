@@ -7,21 +7,27 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 import ru.partyshaker.partyshaker.R
+import ru.partyshaker.partyshaker.databinding.FragmentLoginBinding
+import ru.partyshaker.partyshaker.databinding.FragmentMainBinding
 
+@AndroidEntryPoint
 class LoginFragment : Fragment() {
+
+    private lateinit var binding: FragmentLoginBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+    ): View {
+        binding = FragmentLoginBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<Button>(R.id.button_navigate_back).setOnClickListener {
+        binding.buttonNavigateBack.setOnClickListener {
             navUp()
         }
     }
