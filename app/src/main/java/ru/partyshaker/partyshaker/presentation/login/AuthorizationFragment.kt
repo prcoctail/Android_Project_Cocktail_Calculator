@@ -1,4 +1,4 @@
-package ru.partyshaker.partyshaker.ui.fragments
+package ru.partyshaker.partyshaker.presentation.login
 
 import android.content.res.Resources
 import android.os.Bundle
@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
 import ru.partyshaker.partyshaker.databinding.FragmentAuthorizationBinding
-import ru.partyshaker.partyshaker.presentation.login.AuthorizationPagerAdapter
 
 class AuthorizationFragment : Fragment() {
 

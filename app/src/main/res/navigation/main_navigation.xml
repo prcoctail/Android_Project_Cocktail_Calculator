@@ -21,7 +21,7 @@
         tools:layout="@layout/fragment_login" />
     <fragment
         android:id="@+id/authorizationFragment"
-        android:name="ru.partyshaker.partyshaker.ui.fragments.AuthorizationFragment"
+        android:name="ru.partyshaker.partyshaker.presentation.login.AuthorizationFragment"
         android:label="fragment_authorization"
         tools:layout="@layout/fragment_authorization" />
 </navigation>
