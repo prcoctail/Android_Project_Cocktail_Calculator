@@ -32,6 +32,6 @@ class MainFragment : Fragment() {
     }
 
     private fun launchLoginFragment() {
-        findNavController().navigate(R.id.action_mainFragment_to_loginFragment)
+        findNavController().navigate(R.id.action_mainFragment_to_authorizationFragment)
     }
 }

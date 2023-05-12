@@ -32,9 +32,6 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.buttonNavigateBack.setOnClickListener {
-            navUp()
-        }
     }
 
     private fun navUp() {

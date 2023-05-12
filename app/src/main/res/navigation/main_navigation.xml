@@ -11,12 +11,17 @@
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
-            android:id="@+id/action_mainFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            android:id="@+id/action_mainFragment_to_authorizationFragment"
+            app:destination="@id/authorizationFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="ru.partyshaker.partyshaker.presentation.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/authorizationFragment"
+        android:name="ru.partyshaker.partyshaker.ui.fragments.AuthorizationFragment"
+        android:label="fragment_authorization"
+        tools:layout="@layout/fragment_authorization" />
 </navigation>
