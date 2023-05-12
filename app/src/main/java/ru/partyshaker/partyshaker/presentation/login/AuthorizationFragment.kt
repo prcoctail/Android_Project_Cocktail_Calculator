@@ -7,17 +7,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
+import ru.partyshaker.partyshaker.constants.fragmentNotFoundExceptionText
+import ru.partyshaker.partyshaker.constants.loginText
+import ru.partyshaker.partyshaker.constants.registerText
 import ru.partyshaker.partyshaker.databinding.FragmentAuthorizationBinding
 
 class AuthorizationFragment : Fragment() {
 
     private var _binding: FragmentAuthorizationBinding? = null
-    private val binding get() = _binding!!
+    private val binding get() = requireNotNull(_binding)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentAuthorizationBinding.inflate(inflater, container, false)
 
@@ -28,13 +31,13 @@ class AuthorizationFragment : Fragment() {
         TabLayoutMediator(binding.tabLayout, binding.vpAuthorization) { tab, index ->
             tab.text = when (index) {
                 0 -> {
-                    "Вход"
+                    loginText
                 }
                 1 -> {
-                    "Регистрация"
+                    registerText
                 }
                 else -> {
-                    throw Resources.NotFoundException("Position Not Found")
+                    throw Resources.NotFoundException(fragmentNotFoundExceptionText)
                 }
             }
         }.attach()

@@ -2,4 +2,17 @@
     <string name="app_name">PartyShaker</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login">Войти</string>
+    <string name="forgot_password">Забыли пароль?</string>
+    <string name="restore_password">Восстановить</string>
+    <string name="email_or_password_error">Аккаунт или пароль введены неверно</string>
+    <string name="password">Пароль</string>
+    <string name="email">Электронная почта</string>
+    <string name="register">Регистрация</string>
+    <string name="nickname">Ваш никнейм</string>
+    <string name="repeat_password">Повторите пароль</string>
+    <string name="account_exists_error">Такой пароль аккаунт уже есть в системе</string>
+    <string name="privacy_policy_label">Мне исполнилось 18 лет и я согласен с Политикой конфидециальности</string>
+    <string name="sign_up">Зарегистрироваться</string>
+    <string name="label">Label</string>
 </resources>

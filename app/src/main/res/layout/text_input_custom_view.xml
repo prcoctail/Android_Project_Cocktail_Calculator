@@ -11,7 +11,7 @@
         style="@style/MyOutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Label"
+        android:hint="@string/label"
         app:endIconDrawable="@drawable/ic_cross"
         app:endIconMode="clear_text"
         app:errorEnabled="false"
