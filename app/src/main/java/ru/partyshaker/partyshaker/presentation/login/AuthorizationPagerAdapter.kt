@@ -18,7 +18,8 @@ class AuthorizationPagerAdapter(fragmentActivity: FragmentActivity) :
             1 -> {
                 RegisterFragment()
             }
-            else -> {throw Resources.NotFoundException("Position Not Found")
+            else -> {
+                throw Resources.NotFoundException("Position Not Found")
             }
         }
     }

@@ -5,8 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="28dp"
-    android:background="@drawable/dark_form_bg"
-    tools:context=".ui.fragments.LoginFragment">
+    android:paddingHorizontal="16dp"
+    tools:context=".presentation.login.LoginFragment">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dark_form_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvLabel"
@@ -80,7 +89,7 @@
         android:layout_marginTop="142dp"
         android:layout_marginBottom="20dp"
         android:text="Войти"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etPassword"
-        app:layout_constraintVertical_bias="1" />
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

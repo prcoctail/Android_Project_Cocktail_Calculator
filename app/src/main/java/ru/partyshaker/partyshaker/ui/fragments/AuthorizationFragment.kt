@@ -1,18 +1,50 @@
 package ru.partyshaker.partyshaker.ui.fragments
 
+import android.content.res.Resources
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import ru.partyshaker.partyshaker.R
+import androidx.fragment.app.Fragment
+import com.google.android.material.tabs.TabLayoutMediator
+import ru.partyshaker.partyshaker.databinding.FragmentAuthorizationBinding
+import ru.partyshaker.partyshaker.presentation.login.AuthorizationPagerAdapter
 
 class AuthorizationFragment : Fragment() {
+
+    private var _binding: FragmentAuthorizationBinding? = null
+    private val binding get() = _binding!!
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_authorization, container, false)
+
+        _binding = FragmentAuthorizationBinding.inflate(inflater, container, false)
+
+        binding.vpAuthorization.apply {
+            adapter = AuthorizationPagerAdapter(requireActivity())
+        }
+
+        TabLayoutMediator(binding.tabLayout, binding.vpAuthorization) { tab, index ->
+            tab.text = when (index) {
+                0 -> {
+                    "Вход"
+                }
+                1 -> {
+                    "Регистрация"
+                }
+                else -> {
+                    throw Resources.NotFoundException("Position Not Found")
+                }
+            }
+        }.attach()
+
+        return binding.root
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }
