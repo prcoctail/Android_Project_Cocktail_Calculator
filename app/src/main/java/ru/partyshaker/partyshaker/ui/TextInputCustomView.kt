@@ -9,6 +9,10 @@ import android.view.LayoutInflater
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.constraintlayout.widget.ConstraintLayout
 import ru.partyshaker.partyshaker.R
+import ru.partyshaker.partyshaker.constants.EMAIL_INPUT_STATE
+import ru.partyshaker.partyshaker.constants.ERROR_STATE
+import ru.partyshaker.partyshaker.constants.NUMBER_INPUT_STATE
+import ru.partyshaker.partyshaker.constants.SEARCH_STATE
 import ru.partyshaker.partyshaker.databinding.TextInputCustomViewBinding
 
 class TextInputCustomView @JvmOverloads constructor(
@@ -49,16 +53,16 @@ class TextInputCustomView @JvmOverloads constructor(
 
     fun setInputType(inputType: String?) {
         when (inputType) {
-            "1" -> {
+            ERROR_STATE -> {
                 setupPasswordState()
             }
-            "2" -> {
+            SEARCH_STATE -> {
                 setSearchIconEnabled(true)
             }
-            "3" -> {
+            NUMBER_INPUT_STATE -> {
                 setupNumberInputState()
             }
-            "4" -> {
+            EMAIL_INPUT_STATE -> {
                 setupEmailInputState()
             }
             else -> {

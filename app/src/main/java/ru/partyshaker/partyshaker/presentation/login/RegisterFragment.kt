@@ -11,8 +11,6 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import ru.partyshaker.partyshaker.R
-import ru.partyshaker.partyshaker.constants.privacyPolicyActionText
-import ru.partyshaker.partyshaker.constants.privacyPolicyLabel
 import ru.partyshaker.partyshaker.databinding.FragmentRegisterBinding
 
 class RegisterFragment : Fragment() {
@@ -32,9 +30,9 @@ class RegisterFragment : Fragment() {
     }
 
     private fun setupPolicyLink() {
-        val text = privacyPolicyLabel
-        val startIndex = text.indexOf(privacyPolicyActionText)
-        val endIndex = startIndex + privacyPolicyActionText.length
+        val text = getString(R.string.privacy_policy_label)
+        val startIndex = text.indexOf(getString(R.string.privacy_policy))
+        val endIndex = startIndex + getString(R.string.privacy_policy).length
         val spannableString = SpannableString(text)
 
         val clickableSpan = object : ClickableSpan() {

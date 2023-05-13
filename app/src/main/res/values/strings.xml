@@ -14,5 +14,8 @@
     <string name="account_exists_error">Такой пароль аккаунт уже есть в системе</string>
     <string name="privacy_policy_label">Мне исполнилось 18 лет и я согласен с Политикой конфидециальности</string>
     <string name="sign_up">Зарегистрироваться</string>
+    <string name="privacy_policy">Политикой конфидециальности</string>
+    <string name="authorize">Вход</string>
     <string name="label">Label</string>
+    <string name="fragment_not_found_text">Position Not Found</string>
 </resources>

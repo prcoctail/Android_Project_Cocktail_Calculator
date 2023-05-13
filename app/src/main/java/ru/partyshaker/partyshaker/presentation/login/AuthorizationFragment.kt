@@ -1,15 +1,12 @@
 package ru.partyshaker.partyshaker.presentation.login
 
-import android.content.res.Resources
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
-import ru.partyshaker.partyshaker.constants.fragmentNotFoundExceptionText
-import ru.partyshaker.partyshaker.constants.loginText
-import ru.partyshaker.partyshaker.constants.registerText
+import ru.partyshaker.partyshaker.R
 import ru.partyshaker.partyshaker.databinding.FragmentAuthorizationBinding
 
 class AuthorizationFragment : Fragment() {
@@ -18,8 +15,7 @@ class AuthorizationFragment : Fragment() {
     private val binding get() = requireNotNull(_binding)
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
 
         _binding = FragmentAuthorizationBinding.inflate(inflater, container, false)
@@ -31,13 +27,13 @@ class AuthorizationFragment : Fragment() {
         TabLayoutMediator(binding.tabLayout, binding.vpAuthorization) { tab, index ->
             tab.text = when (index) {
                 0 -> {
-                    loginText
+                    getString(R.string.authorize)
                 }
                 1 -> {
-                    registerText
+                    getString(R.string.register)
                 }
                 else -> {
-                    throw Resources.NotFoundException(fragmentNotFoundExceptionText)
+                    getString(R.string.fragment_not_found_text)
                 }
             }
         }.attach()
