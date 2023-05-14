@@ -1,4 +1,4 @@
-package ru.partyshaker.partyshaker.cocktails
+package ru.partyshaker.partyshaker.features.cocktails.ui
 
 import android.os.Bundle
 import android.util.Log
@@ -10,8 +10,8 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
-import ru.partyshaker.partyshaker.cocktails.data.data_classes.AdapterCocktailsList
 import ru.partyshaker.partyshaker.databinding.FragmentCocktailsBinding
+import ru.partyshaker.partyshaker.features.cocktails.repository.RepositoryCocktails
 import javax.inject.Inject
 
 @AndroidEntryPoint

@@ -9,7 +9,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import ru.partyshaker.partyshaker.cocktails.data.ServiceCocktails
+import ru.partyshaker.partyshaker.features.cocktails.repository.ServiceCocktails
 import javax.inject.Singleton
 
 @Module

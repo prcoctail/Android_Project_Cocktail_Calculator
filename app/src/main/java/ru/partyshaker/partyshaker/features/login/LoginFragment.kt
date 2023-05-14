@@ -1,4 +1,4 @@
-package ru.partyshaker.partyshaker.presentation.login
+package ru.partyshaker.partyshaker.features.login
 
 import android.os.Bundle
 import android.util.Log

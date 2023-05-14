@@ -1,4 +1,4 @@
-package ru.partyshaker.partyshaker.presentation.main
+package ru.partyshaker.partyshaker.features.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

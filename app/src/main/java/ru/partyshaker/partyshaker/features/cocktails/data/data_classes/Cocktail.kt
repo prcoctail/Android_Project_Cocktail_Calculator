@@ -1,11 +1,11 @@
-package ru.partyshaker.partyshaker.cocktails.data.data_classes
+package ru.partyshaker.partyshaker.features.cocktails.data.data_classes
 
 import com.google.gson.annotations.SerializedName
 import ru.partyshaker.partyshaker.ApiCocktails.*
 
-data class Result(
+data class Cocktail(
     @SerializedName("author")
-    val author: String,
+    val author: Author,
     @SerializedName("complexity")
     val complexity: List<Complexity>,
     @SerializedName("description")
@@ -19,11 +19,11 @@ data class Result(
     @SerializedName("ingredients")
     val ingredients: List<Ingredient>,
     @SerializedName("is_favorited")
-    val isFavorited: Boolean,
+    val isFavorite: Boolean,
     @SerializedName("name")
     val name: String,
     @SerializedName("strength")
     val strength: List<Strength>,
     @SerializedName("taste")
     val taste: List<Taste>
-)
+    )

@@ -1,15 +1,16 @@
-package ru.partyshaker.partyshaker.cocktails.data.data_classes
+package ru.partyshaker.partyshaker.features.cocktails.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import ru.partyshaker.partyshaker.databinding.CocktailItemBinding
+import ru.partyshaker.partyshaker.features.cocktails.data.data_classes.Cocktail
 
 class AdapterCocktailsList : RecyclerView.Adapter<CocktailsViewHolder>() {
 
-    var cocktails = mutableListOf<ru.partyshaker.partyshaker.cocktails.data.data_classes.Result>()
-    fun setCocktailsList(cocktails: List<ru.partyshaker.partyshaker.cocktails.data.data_classes.Result>) {
+    var cocktails = mutableListOf<Cocktail>()
+    fun setCocktailsList(cocktails: List<Cocktail>) {
         this.cocktails = cocktails.toMutableList()
         notifyDataSetChanged()
     }
