@@ -8,10 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
-import ru.partyshaker.partyshaker.R
 import ru.partyshaker.partyshaker.cocktails.data.data_classes.AdapterCocktailsList
 import ru.partyshaker.partyshaker.databinding.FragmentCocktailsBinding
 import javax.inject.Inject
@@ -24,14 +22,14 @@ class CocktailsFragment : Fragment() {
     @Inject
     lateinit var repository: RepositoryCocktails
     private val viewModel by viewModels<ViewModelCocktails>()
-    val adapter = AdapterCocktailsList()
+    private val cocktailAdapter: AdapterCocktailsList by lazy { AdapterCocktailsList() }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentCocktailsBinding.inflate(inflater, container, false)
-
+        println("THE LIST IS NOT NULL==================")
         return binding.root
     }
 
@@ -39,13 +37,15 @@ class CocktailsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.recyclerviewCocktails.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-        binding.recyclerviewCocktails.adapter = adapter
+        binding.recyclerviewCocktails.adapter = cocktailAdapter
 
         viewModel.cocktailsList.observe(viewLifecycleOwner, Observer {
             Log.d(TAG, "onCreate: $it")
             if (it != null) {
-                adapter.setCocktailsList(it)
+                cocktailAdapter.setCocktailsList(it)
+                println("THE LIST IS NOT NULL==================")
             }
+            println("THE LIST NULL==================")
         })
 
         viewModel.errorMessage.observe(viewLifecycleOwner, Observer {
