@@ -1,11 +1,11 @@
 package ru.partyshaker.partyshaker.cocktails
 
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import ru.partyshaker.partyshaker.ApiResponse
+import ru.partyshaker.partyshaker.cocktails.data.ServiceCocktails
 import javax.inject.Inject
-import ru.partyshaker.partyshaker.cocktails.data.data_classes.Result
+
 
 class RepositoryCocktails @Inject constructor(
     private val retrofitService: ServiceCocktails
