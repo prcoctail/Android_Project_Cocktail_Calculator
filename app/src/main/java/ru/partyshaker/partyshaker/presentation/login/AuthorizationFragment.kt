@@ -26,10 +26,10 @@ class AuthorizationFragment : Fragment() {
 
         TabLayoutMediator(binding.tabLayout, binding.vpAuthorization) { tab, index ->
             tab.text = when (index) {
-                0 -> {
+                LOGIN -> {
                     getString(R.string.authorize)
                 }
-                1 -> {
+                SIGN_UP -> {
                     getString(R.string.register)
                 }
                 else -> {
@@ -44,5 +44,10 @@ class AuthorizationFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    companion object {
+        private const val LOGIN = 0
+        private const val SIGN_UP = 1
     }
 }
