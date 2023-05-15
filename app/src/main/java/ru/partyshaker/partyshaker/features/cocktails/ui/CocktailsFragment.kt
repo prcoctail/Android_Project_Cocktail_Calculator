@@ -42,7 +42,7 @@ class CocktailsFragment : Fragment() {
         viewModel.cocktailsList.observe(viewLifecycleOwner, Observer {
             Log.d(TAG, "onCreate: $it")
             if (it != null) {
-                cocktailAdapter.setCocktailsList(it)
+                cocktailAdapter.submitList(it)
                 println("THE LIST IS NOT NULL==================")
             }
             println("THE LIST NULL==================")
