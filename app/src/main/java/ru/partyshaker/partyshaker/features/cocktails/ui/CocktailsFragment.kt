@@ -29,7 +29,6 @@ class CocktailsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentCocktailsBinding.inflate(inflater, container, false)
-        println("THE LIST IS NOT NULL==================")
         return binding.root
     }
 
@@ -40,12 +39,9 @@ class CocktailsFragment : Fragment() {
         binding.recyclerviewCocktails.adapter = cocktailAdapter
 
         viewModel.cocktailsList.observe(viewLifecycleOwner, Observer {
-            Log.d(TAG, "onCreate: $it")
             if (it != null) {
                 cocktailAdapter.submitList(it)
-                println("THE LIST IS NOT NULL==================")
             }
-            println("THE LIST NULL==================")
         })
 
         viewModel.errorMessage.observe(viewLifecycleOwner, Observer {

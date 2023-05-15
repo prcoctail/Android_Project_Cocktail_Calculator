@@ -3,7 +3,6 @@ package ru.partyshaker.partyshaker.ApiCocktails
 
 import com.google.gson.annotations.SerializedName
 
-
 data class Format(
     @SerializedName("description")
     val description: String,
