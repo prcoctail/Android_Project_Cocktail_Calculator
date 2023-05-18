@@ -1,5 +1,6 @@
 package ru.partyshaker.partyshaker.features.cocktails.ui
 
+import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -20,11 +21,12 @@ class ViewModelCocktails @Inject constructor(private val repository: RepositoryC
         viewModelScope.launch {
             try {
                 val result = repository.getCocktails()
-                when {
-                    result is Result.Success -> cocktailsList.postValue(result.data)
-                    result is Result.Error -> errorMessage.postValue(result.exception)
+                when (result) {
+                    is Result.Success -> cocktailsList.postValue(result.data)
+                    is Result.Error -> errorMessage.postValue(result.exception)
                 }
             } catch (e: Exception) {
+             // TODO(): Toast
             }
         }
 
