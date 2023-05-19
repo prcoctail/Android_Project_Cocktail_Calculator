@@ -9,6 +9,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import ru.partyshaker.partyshaker.features.cocktails.repository.ServiceCocktails
 import javax.inject.Singleton
 
 @Module
@@ -48,6 +49,12 @@ class NetworkModule {
             .client(okHttpClient)
             .build()
     }
+
+    @Provides
+    @Singleton
+    fun provideServiceCocktails(
+        retrofitInstance: Retrofit,
+    ) = retrofitInstance.create(ServiceCocktails::class.java)
 
 
     companion object {
