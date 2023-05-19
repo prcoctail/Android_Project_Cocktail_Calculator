@@ -10,12 +10,16 @@ class AuthorizationPagerAdapter(fragmentActivity: FragmentActivity) :
         LOGIN, REGISTER
     }
 
-    override fun getItemCount() = 2
+    override fun getItemCount() = NUMBER_OF_PAGES
 
     override fun createFragment(position: Int): Fragment {
         return when (FragmentType.values()[position]) {
             FragmentType.LOGIN -> LoginFragment()
             FragmentType.REGISTER -> RegisterFragment()
         }
+    }
+
+    companion object{
+        private const val NUMBER_OF_PAGES = 2
     }
 }

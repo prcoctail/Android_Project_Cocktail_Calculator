@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="@string/login"
+        android:text="@string/authorize"
         android:textColor="@color/material_theme_sys_dark_on_surface"
         android:textSize="24sp"
         app:layout_constraintTop_toTopOf="parent" />

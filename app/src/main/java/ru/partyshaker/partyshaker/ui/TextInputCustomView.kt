@@ -124,7 +124,7 @@ class TextInputCustomView @JvmOverloads constructor(
 
         with(binding) {
             val hintText = typedArray.getString(R.styleable.TextInputCustomView_hintText)
-            textField.hint = hintText ?: "Label"
+            textField.hint = hintText ?: context.getString(R.string.default_hint_text)
 
             val supportText = typedArray.getString(R.styleable.TextInputCustomView_supportText)
             textField.helperText = supportText
