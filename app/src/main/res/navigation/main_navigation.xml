@@ -17,19 +17,24 @@
             android:id="@+id/action_mainFragment_to_cocktailsFragment"
             app:destination="@id/cocktailsFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/loginFragment"
         android:name="ru.partyshaker.partyshaker.features.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
+
     <fragment
         android:id="@+id/authorizationFragment"
         android:name="ru.partyshaker.partyshaker.presentation.login.AuthorizationFragment"
         android:label="fragment_authorization"
         tools:layout="@layout/fragment_authorization" />
+
     <fragment
         android:id="@+id/cocktailsFragment"
         android:name="ru.partyshaker.partyshaker.features.cocktails.ui.CocktailsFragment"
         android:label="fragment_cocktails"
         tools:layout="@layout/fragment_cocktails" />
+
+
 </navigation>
