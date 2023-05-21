@@ -11,12 +11,11 @@
         style="@style/MyOutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Label"
+        android:hint="@string/label"
         app:endIconDrawable="@drawable/ic_cross"
         app:endIconMode="clear_text"
         app:errorEnabled="false"
         app:errorIconDrawable="@drawable/ic_exclamation"
-        app:helperText="Supporting text"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/TextInputLayoutAppearance"
         app:startIconDrawable="@drawable/ic_search">

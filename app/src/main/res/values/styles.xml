@@ -41,4 +41,8 @@
         <item name="android:background">@android:color/transparent</item>
         <item name="android:textColor">@color/material_theme_sys_dark_error</item>
     </style>
+
+    <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item>
+    </style>
 </resources>
