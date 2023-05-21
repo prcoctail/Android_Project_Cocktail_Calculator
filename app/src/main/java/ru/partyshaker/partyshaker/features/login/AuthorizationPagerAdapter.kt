@@ -1,8 +1,9 @@
-package ru.partyshaker.partyshaker.presentation.login
+package ru.partyshaker.partyshaker.features.login
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import ru.partyshaker.partyshaker.presentation.login.RegisterFragment
 
 class AuthorizationPagerAdapter(fragmentActivity: FragmentActivity) :
     FragmentStateAdapter(fragmentActivity) {

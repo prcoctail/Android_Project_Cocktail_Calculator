@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
 import ru.partyshaker.partyshaker.R
 import ru.partyshaker.partyshaker.databinding.FragmentAuthorizationBinding
+import ru.partyshaker.partyshaker.features.login.AuthorizationPagerAdapter
 
 class AuthorizationFragment : Fragment() {
 
