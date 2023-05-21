@@ -1,4 +1,4 @@
-package ru.partyshaker.partyshaker.presentation.main
+package ru.partyshaker.partyshaker.features.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -28,6 +28,9 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.buttonNavigateLogin.setOnClickListener {
             launchLoginFragment()
+        }
+        binding.buttonNavigateToCocktailList.setOnClickListener{
+            findNavController().navigate(R.id.action_mainFragment_to_cocktailsFragment)
         }
     }
 

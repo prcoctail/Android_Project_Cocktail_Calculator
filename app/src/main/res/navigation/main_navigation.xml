@@ -7,16 +7,19 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="ru.partyshaker.partyshaker.presentation.main.MainFragment"
+        android:name="ru.partyshaker.partyshaker.features.main.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/action_mainFragment_to_authorizationFragment"
             app:destination="@id/authorizationFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_cocktailsFragment"
+            app:destination="@id/cocktailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="ru.partyshaker.partyshaker.presentation.login.LoginFragment"
+        android:name="ru.partyshaker.partyshaker.features.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
     <fragment
@@ -24,4 +27,9 @@
         android:name="ru.partyshaker.partyshaker.presentation.login.AuthorizationFragment"
         android:label="fragment_authorization"
         tools:layout="@layout/fragment_authorization" />
+    <fragment
+        android:id="@+id/cocktailsFragment"
+        android:name="ru.partyshaker.partyshaker.features.cocktails.ui.CocktailsFragment"
+        android:label="fragment_cocktails"
+        tools:layout="@layout/fragment_cocktails" />
 </navigation>
