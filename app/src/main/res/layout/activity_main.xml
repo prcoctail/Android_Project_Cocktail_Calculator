@@ -23,8 +23,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:itemIconTint="@color/material_theme_sys_dark_on_surface"
         app:menu="@menu/bottom_nav_menu"
-        app:itemTextColor="@color/white"
-        android:background="@color/background_color"/>
+        app:itemTextColor="@color/material_theme_sys_dark_on_surface"
+        android:background="@color/material_theme_sys_dark_surface_container_high"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
