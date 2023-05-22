@@ -3,15 +3,18 @@
 
     <item
         android:id="@+id/cocktailsFragment"
-        android:icon="@drawable/ic_cross"
-        android:title="@string/title_cocktails" />
+        android:icon="@drawable/navig_cocktails"
+        android:title="@string/title_cocktails"
+        android:iconTint="@color/white"/>
     <item
         android:id="@+id/authorizationFragment"
-        android:icon="@drawable/ic_cross"
-        android:title="@string/title_ingredients" />
+        android:icon="@drawable/navig_ingredients"
+        android:title="@string/title_ingredients"
+        android:iconTint="@color/white"/>
     <item
         android:id="@+id/mainFragment"
-        android:icon="@drawable/ic_cross"
-        android:title="@string/title_mybar" />
+        android:icon="@drawable/navig_my_bar"
+        android:title="@string/title_mybar"
+        android:iconTint="@color/white"/>
 
 </menu>
