@@ -1,4 +1,4 @@
-package ru.partyshaker.partyshaker.features.login
+package ru.partyshaker.partyshaker.features.login.presentation
 
 import android.os.Bundle
 import android.text.SpannableString
