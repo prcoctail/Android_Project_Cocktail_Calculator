@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:minHeight="380dp"
     android:paddingHorizontal="16dp"
-    tools:context=".presentation.login.RegisterFragment">
+    tools:context=".features.login.RegisterFragment">
     <View
         android:layout_width="0dp"
         android:layout_height="0dp"
