@@ -9,7 +9,9 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 import ru.partyshaker.partyshaker.features.cocktails.repository.ServiceCocktails
+import ru.partyshaker.partyshaker.features.login.domain.AuthorizationService
 import javax.inject.Singleton
 
 @Module
@@ -56,8 +58,14 @@ class NetworkModule {
         retrofitInstance: Retrofit,
     ) = retrofitInstance.create(ServiceCocktails::class.java)
 
+    @Provides
+    @Singleton
+    fun provideAuthorizationService(
+        retrofitInstance: Retrofit
+    ) = retrofitInstance.create(AuthorizationService::class.java)
+
 
     companion object {
-        private const val BASE_URL = "http://partyshaker.online/api/"
+        private const val BASE_URL = "https://partyshaker.online/api/"
     }
 }
