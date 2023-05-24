@@ -17,4 +17,8 @@
     <string name="label">Label</string>
     <string name="fragment_not_found_text">Position Not Found</string>
     <string name="default_hint_text">Label</string>
+    <string name="empty_password_error_text">Введите пароль</string>
+    <string name="password_length_error_text">Ваш пароль должен содержать не менее 8-ми символов</string>
+    <string name="empty_email_error_text">Введите адрес электронной почты</string>
+    <string name="wrong_email_format_text">Неправельный формат электронной почты</string>
 </resources>
