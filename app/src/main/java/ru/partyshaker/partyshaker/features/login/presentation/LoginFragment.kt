@@ -21,7 +21,6 @@ class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = requireNotNull(_binding)
     private val viewModel: LoginViewModel by viewModels()
-    private val loginRequest = LoginRequest("admin@admin.ru", "Admin123!")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -31,7 +30,7 @@ class LoginFragment : Fragment() {
         setUpTextWatchers()
 
         binding.btnLogin.setOnClickListener {
-            if (validation()){
+            if (validation()) {
                 val loginInput = LoginRequest(
                     binding.etEmail.getEditText().text.toString().trim(),
                     binding.etPassword.getEditText().text.toString().trim()
@@ -40,18 +39,17 @@ class LoginFragment : Fragment() {
             }
         }
 
-        viewModel.errorMessage.observe(viewLifecycleOwner){
+        viewModel.errorMessage.observe(viewLifecycleOwner) {
             binding.tvErrorText.apply {
-               text = it
-               visibility = View.VISIBLE
+                text = it
+                visibility = View.VISIBLE
             }
         }
-
 
         return binding.root
     }
 
-    private fun validation(): Boolean{
+    private fun validation(): Boolean {
         isEmailValid()
         isPasswordValid()
         return isEmailValid() && isPasswordValid()
@@ -85,7 +83,7 @@ class LoginFragment : Fragment() {
         }
     }
 
-    private fun setUpTextWatchers(){
+    private fun setUpTextWatchers() {
         binding.etEmail.getEditText().addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 

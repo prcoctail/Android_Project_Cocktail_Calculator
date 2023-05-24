@@ -23,8 +23,7 @@ class LoginViewModel @Inject constructor(private val repository: AuthorizationRe
     fun getAuthToken(loginRequest: LoginRequest) {
         viewModelScope.launch {
             try {
-                val tokenResult = repository.login(loginRequest)
-                when (tokenResult) {
+                when (val tokenResult = repository.login(loginRequest)) {
                     is Result.Success -> {
                         if (tokenResult.data.isNotEmpty()) {
                             sessionManager.saveAuthToken(tokenResult.data)
