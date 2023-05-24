@@ -38,8 +38,16 @@ class LoginFragment : Fragment() {
                 )
                 viewModel.getAuthToken(loginInput)
             }
-
         }
+
+        viewModel.errorMessage.observe(viewLifecycleOwner){
+            binding.tvErrorText.apply {
+               text = it
+               visibility = View.VISIBLE
+            }
+        }
+
+
         return binding.root
     }
 
