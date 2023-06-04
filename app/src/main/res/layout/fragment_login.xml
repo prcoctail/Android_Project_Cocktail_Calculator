@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="28dp"
     android:paddingHorizontal="16dp"
-    tools:context=".presentation.login.LoginFragment">
+    tools:context=".features.login.presentation.LoginFragment">
 
     <View
         android:layout_width="0dp"
@@ -47,7 +47,7 @@
 
     <TextView
         android:id="@+id/tvErrorText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="16dp"

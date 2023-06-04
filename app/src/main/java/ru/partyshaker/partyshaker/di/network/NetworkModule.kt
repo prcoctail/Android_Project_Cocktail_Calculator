@@ -1,15 +1,19 @@
 package ru.partyshaker.partyshaker.di.network
 
+import android.content.Context
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 import ru.partyshaker.partyshaker.features.cocktails.repository.ServiceCocktails
+import ru.partyshaker.partyshaker.features.login.domain.AuthorizationService
 import javax.inject.Singleton
 
 @Module
@@ -56,8 +60,19 @@ class NetworkModule {
         retrofitInstance: Retrofit,
     ) = retrofitInstance.create(ServiceCocktails::class.java)
 
+    @Provides
+    @Singleton
+    fun provideAuthorizationService(
+        retrofitInstance: Retrofit
+    ) = retrofitInstance.create(AuthorizationService::class.java)
+
+    @Singleton
+    @Provides
+    fun provideSharedPreferences(@ApplicationContext app: Context) =
+        app.getSharedPreferences(SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE)
 
     companion object {
-        private const val BASE_URL = "http://partyshaker.online/api/"
+        private const val BASE_URL = "https://partyshaker.online/api/"
+        private const val SHARED_PREFERENCES_NAME = "sharedPref"
     }
 }
