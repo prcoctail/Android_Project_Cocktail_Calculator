@@ -28,6 +28,7 @@ class CocktailsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        println("hop")
         binding = FragmentCocktailsBinding.inflate(inflater, container, false)
         return binding.root
     }
