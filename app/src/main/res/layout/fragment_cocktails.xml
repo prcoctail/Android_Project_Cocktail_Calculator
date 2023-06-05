@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/material_theme_sys_dark_surface_container_high"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".features.cocktails.ui.CocktailsFragment">
 
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/cocktail_item"
-        tools:itemCount="5"
+        tools:itemCount="7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintStart_toStartOf="parent"/>
