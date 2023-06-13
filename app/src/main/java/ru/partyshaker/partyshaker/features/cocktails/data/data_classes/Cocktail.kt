@@ -14,8 +14,8 @@ data class Cocktail(
     val format: List<Format>,
     @SerializedName("id")
     val id: Int,
-    @SerializedName("image")
-    val image: String,
+    @SerializedName("images")
+    val images: List<Images>,
     @SerializedName("ingredients")
     val ingredients: List<Ingredient>,
     @SerializedName("is_favorited")

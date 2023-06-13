@@ -9,6 +9,10 @@ import ru.partyshaker.partyshaker.features.cocktails.data.data_classes.Cocktail
 
 class AdapterCocktailsList : ListAdapter<Cocktail, CocktailsViewHolder>(CocktailItemDiffCallback()) {
 
+    init {
+        println("IMAGE URL")
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CocktailsViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val binding = CocktailItemBinding.inflate(inflater, parent, false)
@@ -18,6 +22,7 @@ class AdapterCocktailsList : ListAdapter<Cocktail, CocktailsViewHolder>(Cocktail
     override fun onBindViewHolder(holder: CocktailsViewHolder, position: Int) {
         val cocktail = getItem(position)
         holder.binding.name.text = cocktail.name
-        Glide.with(holder.itemView.context).load(cocktail.image).into(holder.binding.imageview)
+        Glide.with(holder.itemView.context).load(cocktail.images[0].smallImage).into(holder.binding.imageview)
+        println("IMAGE URL ${cocktail.images[0].smallImage}")
     }
 }

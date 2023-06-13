@@ -21,4 +21,7 @@
     <string name="password_length_error_text">Ваш пароль должен содержать не менее 8-ми символов</string>
     <string name="empty_email_error_text">Введите адрес электронной почты</string>
     <string name="wrong_email_format_text">Неправельный формат электронной почты</string>
+    <string name="title_cocktails">Коктейли</string>
+    <string name="title_ingredients">Ингридиенты</string>
+    <string name="title_mybar">Мой бар</string>
 </resources>

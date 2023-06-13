@@ -1,28 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_margin="8dp"
-    android:elevation="8dp"
-    app:cardCornerRadius="8dp">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/imageview"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+app:cardCornerRadius="20dp"
+app:cardElevation="4dp"
+app:cardUseCompatPadding="true">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:scaleType="centerCrop"
-        android:layout_height="200dp" />
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:gravity="center_vertical"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/teal_700"
-        tools:text="Cocktail"
-        android:paddingStart="8dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_dark_background"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@color/cardview_dark_background"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageview"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/img_cocktail" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:paddingBottom="8dp"
+            android:paddingRight="12dp"
+            android:backgroundTint="@color/cardview_dark_background"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/card_img"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group"
+                android:layout_width="1dp"
+                android:layout_height="6dp"
+                app:constraint_referenced_ids="cocktail_level,separation,max_level,img_level"
+                app:layout_constraintTop_toBottomOf="@+id/name"
+                tools:layout_editor_absoluteX="26dp" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="Название коктейля" />
+
+
+            <TextView
+                android:id="@+id/cocktail_level"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="18dp"
+                tools:layout_editor_absoluteY="24dp"
+                tools:text="4.8" />
+
+            <TextView
+                android:id="@+id/separation"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="37dp"
+                tools:layout_editor_absoluteY="24dp"
+                tools:text="/" />
+
+            <TextView
+                android:id="@+id/max_level"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="42dp"
+                tools:layout_editor_absoluteY="24dp"
+                tools:text="12" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="ингредиенты" />
+
+            <ImageView
+                android:id="@+id/img_level"
+                android:layout_width="18dp"
+                android:layout_height="17dp"
+                android:layout_marginTop="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/name"
+                app:srcCompat="@android:drawable/btn_star"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <ImageView
+                android:id="@+id/img_heroicons"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_exclamation" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>
