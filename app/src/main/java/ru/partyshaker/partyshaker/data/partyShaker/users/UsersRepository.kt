@@ -1,31 +1,32 @@
 package ru.partyshaker.partyshaker.data.partyShaker.users
 
-import ru.partyshaker.partyshaker.data.errorMessage
-import ru.partyshaker.partyshaker.data.network.NetworkApi
-import ru.partyshaker.partyshaker.data.partyShaker.BaseApi
-import ru.partyshaker.partyshaker.data.partyShaker.users.model.UsersListResponse
-import javax.inject.Inject
+import ru.partyshaker.partyshaker.data.ResultT
+import ru.partyshaker.partyshaker.data.partyShaker.users.impl.model.AuthToken
+import ru.partyshaker.partyshaker.data.partyShaker.users.impl.model.NewUser
+import ru.partyshaker.partyshaker.data.partyShaker.users.impl.model.UsersListResponse
 
-class UsersRepository(@Inject private val networkApi: NetworkApi) {
+interface UsersRepository {
 
     companion object {
         const val FETCH_LIMIT = 12
     }
 
-    private val api: UsersApi = networkApi.createApi(BaseApi.BASE_URL, UsersApi::class.java)
-
     suspend fun getAllUsers(
         limit: Int = FETCH_LIMIT,
         page: Int = 1
-    ): Result<UsersListResponse> {
+    ): ResultT<UsersListResponse>
 
-        val result = api.getAllUsers(limit, page)
 
-        return if (result.body() != null && result.isSuccessful && result.errorBody() == null) {
-            //Successfully got the list
-            Result.success(result.body()!!)
-        } else {
-            Result.failure(Throwable(result.errorMessage()))
-        }
-    }
+    suspend fun registerUser(user: NewUser): ResultT<User>
+
+    suspend fun user(id: Long): ResultT<User>
+
+    suspend fun authToken(email: String, password: String): ResultT<AuthToken>
+
+    fun userLogged(): Boolean
+
+    fun currentUser(): User?
+
+    fun cancelAuth()
+
 }
