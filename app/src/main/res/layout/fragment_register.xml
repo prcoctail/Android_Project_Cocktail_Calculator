@@ -6,7 +6,8 @@
     android:layout_height="wrap_content"
     android:minHeight="380dp"
     android:paddingHorizontal="16dp"
-    tools:context=".features.login.presentation.RegisterFragment">
+    >
+
     <View
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -26,7 +27,7 @@
         android:textSize="24sp"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ru.partyshaker.partyshaker.ui.TextInputCustomView
+    <ru.partyshaker.partyshaker.ui.components.TextInputCustomView
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,7 +37,7 @@
         app:inputType="email"
         app:layout_constraintTop_toBottomOf="@id/tvLabel" />
 
-    <ru.partyshaker.partyshaker.ui.TextInputCustomView
+    <ru.partyshaker.partyshaker.ui.components.TextInputCustomView
         android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,7 +46,7 @@
         app:hintText="@string/nickname"
         app:layout_constraintTop_toBottomOf="@id/etEmail" />
 
-    <ru.partyshaker.partyshaker.ui.TextInputCustomView
+    <ru.partyshaker.partyshaker.ui.components.TextInputCustomView
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,7 +56,7 @@
         app:inputType="password"
         app:layout_constraintTop_toBottomOf="@id/etName" />
 
-    <ru.partyshaker.partyshaker.ui.TextInputCustomView
+    <ru.partyshaker.partyshaker.ui.components.TextInputCustomView
         android:id="@+id/etRepeat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
