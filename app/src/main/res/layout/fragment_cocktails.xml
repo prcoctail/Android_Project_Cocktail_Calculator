@@ -1,21 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/material_theme_sys_dark_surface_container_high"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
     tools:context=".ui.features.cocktails.ui.CocktailsFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/material_theme_sys_dark_surface_container_low"
+        app:cardCornerRadius="24dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:padding="12dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="80dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Для новеньких барменов"
+                    android:textColor="@color/material_theme_sys_dark_on_surface"
+                    android:textSize="16sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Здесь представлены все виды коктейлей. Вы легко сможете найти необходимый с помощью поиска и фильтров"
+                    android:textColor="@color/material_theme_sys_dark_on_surface_variant"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:paddingHorizontal="2dp"
+                android:src="@drawable/baseline_close_24"
+                app:tint="@color/material_theme_sys_dark_on_surface_variant" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="-20dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cocktail_tilted" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/material_theme_sys_dark_surface_container_high"
+        app:cardCornerRadius="28dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:backgroundTint="@color/material_theme_sys_dark_surface_container_highest"
+                android:paddingHorizontal="4dp"
+                app:cardCornerRadius="50dp">
+
+                <ImageButton
+                    android:id="@+id/button11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/baseline_filter"
+                    app:tint="@color/material_theme_sys_dark_primary" />
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="match_parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="Поиск"
+                android:textColorHint="@color/material_theme_sys_dark_on_surface_variant">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:paddingStart="0dp"
+                    android:singleLine="true"
+                    android:text="HELLO"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/material_theme_sys_dark_on_surface_variant"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/button10"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:background="@android:color/transparent"
+                android:padding="12dp"
+                android:src="@drawable/ic_search"
+                app:tint="@color/material_theme_sys_dark_on_surface_variant" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="12dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_cocktails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/cocktail_item"
-        tools:itemCount="7"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintStart_toStartOf="parent"/>
+        tools:itemCount="3"
+        tools:listitem="@layout/cocktail_item" />
 
-</FrameLayout>
+</LinearLayout>
