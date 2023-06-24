@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_mainFragment_to_cocktailsFragment"
             app:destination="@id/cocktailsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_cocktailCardFragment"
+            app:destination="@id/cocktailCardFragment" />
     </fragment>
 
     <fragment
@@ -35,6 +38,11 @@
         android:name="ru.partyshaker.partyshaker.ui.features.cocktails.ui.CocktailsFragment"
         android:label="fragment_cocktails"
         tools:layout="@layout/fragment_cocktails" />
+    <fragment
+        android:id="@+id/cocktailCardFragment"
+        android:name="ru.partyshaker.partyshaker.ui.features.cocktails.ui.CocktailCardFragment"
+        android:label="fragment_cocktail_card"
+        tools:layout="@layout/fragment_cocktail_card" />
 
 
 </navigation>
