@@ -32,4 +32,8 @@
         <item name="errorTextColor">@color/material_theme_sys_dark_error</item>
         <item name="boxStrokeErrorColor">@color/material_theme_sys_dark_error</item>
     </style>
+
+    <style name="CocktailsIsFavoritedCheckBox">
+        <item name="buttonTint">@color/cocktail_is_favorited</item>
+    </style>
 </resources>
