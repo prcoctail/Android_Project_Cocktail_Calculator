@@ -28,12 +28,6 @@ class MainFragment : Fragment() {
         binding.buttonNavigateLogin.setOnClickListener {
             launchLoginFragment()
         }
-        binding.buttonNavigateToCocktailList.setOnClickListener{
-            findNavController().navigate(R.id.action_mainFragment_to_cocktailsFragment)
-        }
-        binding.buttonNavigateToCocktailDescription.setOnClickListener{
-            findNavController().navigate(R.id.action_mainFragment_to_cocktailCardFragment)
-        }
     }
 
     private fun launchLoginFragment() {

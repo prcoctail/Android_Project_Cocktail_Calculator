@@ -1,4 +1,4 @@
-package ru.partyshaker.partyshaker.ApiCocktails
+package ru.partyshaker.partyshaker.ui.features.cocktails.data.data_classes
 
 
 import com.google.gson.annotations.SerializedName
