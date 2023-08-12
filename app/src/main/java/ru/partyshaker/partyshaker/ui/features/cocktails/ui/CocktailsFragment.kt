@@ -10,6 +10,7 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
@@ -22,8 +23,10 @@ import ru.partyshaker.partyshaker.ui.features.cocktails.data.data_classes.Cockta
 class CocktailsFragment : Fragment(), View.OnClickListener, CocktailsAdapter.Listener {
 
     private lateinit var binding: FragmentCocktailsBinding
-    private val viewModel by viewModels<CocktailsViewModel>()
-    private val cocktailAdapter: CocktailsAdapter by lazy { CocktailsAdapter(this) }
+    private val TAG = "CocktailsFragment"
+
+    private val viewModel by viewModels<ViewModelCocktails>()
+    private val cocktailAdapter: AdapterCocktailsList by lazy { AdapterCocktailsList() }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -72,6 +75,14 @@ class CocktailsFragment : Fragment(), View.OnClickListener, CocktailsAdapter.Lis
             binding.cocktailBannerCloseButton.id -> {
                 binding.cocktailsBanner.visibility = View.GONE
             }
+
+        binding.cocktailsFilter.setOnClickListener{
+            findNavController().navigate(R.id.action_cocktailsFragment_to_cocktailsFilterFragment)
+        }
+
+        viewModel.errorMessage.observe(viewLifecycleOwner, Observer {
+
+        })
 
             binding.cocktailsFilterButton.id -> {
 

@@ -85,8 +85,8 @@
             android:orientation="horizontal">
 
                 <ImageButton
-                    android:id="@+id/cocktails_filter_button"
-                    android:layout_width="0dp"
+                    android:id="@+id/cocktails_filter"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.25"
                     android:background="@drawable/cocktails_filter_button_shape"

@@ -6,21 +6,24 @@
     android:layout_height="match_parent"
     android:background="@color/background_color"
     android:orientation="vertical"
-    tools:context=".ui.features.cocktails.ui.CocktailFilterFragment">
+    tools:context=".ui.features.cocktails.ui.filter.CocktailsFilterFragment">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:background="@color/background_color" />
+        android:background="@color/background_color"
+        app:tabGravity="fill"
+        app:tabMode="fixed" />
 
+    <!-- android:layout_alignParentEnd="true" -->
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/view_pager_2"
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/cardView"
-        android:layout_alignBottom="@id/tab_layout" />
+        android:layout_height="match_parent"
+        android:layout_above="@id/cardView"
+        android:layout_below="@id/tab_layout" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -39,7 +42,7 @@
             android:paddingBottom="16dp">
 
             <Button
-                android:id="@+id/button11"
+                android:id="@+id/cocktails_filter_cancel_button"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -50,7 +53,7 @@
                 android:textSize="14sp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/button12"
+                android:id="@+id/cocktails_filter_apply_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/material_theme_sys_dark_primary"

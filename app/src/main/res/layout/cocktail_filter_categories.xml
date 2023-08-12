@@ -1,247 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:backgroundTint="@color/material_theme_sys_dark_surface_container_low"
     app:cardCornerRadius="28dp">
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <TextView
-                android:id="@+id/textView13"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Сложность"
-                android:textColor="@color/material_theme_sys_dark_on_surface"
-                android:textSize="22sp" />
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/complexities"
+                    android:textColor="@color/material_theme_sys_dark_on_surface"
+                    android:textSize="22sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/complexities_chip_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <Button
+                    android:id="@+id/complexities_show_more_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/filter_show_more_button_unfold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/material_theme_sys_dark_primary"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </LinearLayout>
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="24dp" />
+                android:layout_height="36dp" />
 
-            <com.google.android.material.chip.ChipGroup
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                <com.google.android.material.chip.Chip
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/strengths"
+                    android:textColor="@color/material_theme_sys_dark_on_surface"
+                    android:textSize="22sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/strengths_chip_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <Button
+                    android:id="@+id/strengths_show_more_button"
+                    style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Тег"
-                    android:textColor="@color/material_theme_sys_dark_on_surface_variant"
+                    tools:text="@string/filter_show_more_button_unfold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/material_theme_sys_dark_primary"
                     android:textSize="14sp"
-                    app:chipBackgroundColor="@color/material_theme_sys_dark_surface_container_low"
-                    app:chipStrokeColor="@color/material_theme_sys_dark_on_surface_variant"
-                    app:chipStrokeWidth="1dp" />
-
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Тег 2"
-                    android:textColor="@color/material_theme_sys_dark_on_secondary_container"
-                    android:textSize="14sp"
-                    app:chipBackgroundColor="@color/material_theme_sys_dark_secondary_container"
-                    app:chipStrokeColor="@color/material_theme_sys_dark_on_surface_variant"
-                    app:chipStrokeWidth="1dp" />
-            </com.google.android.material.chip.ChipGroup>
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </LinearLayout>
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="24dp" />
+                android:layout_height="36dp" />
 
-            <Button
-                android:id="@+id/button6"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Показать все"
-                android:textAllCaps="false"
-                android:textColor="@color/material_theme_sys_dark_primary"
-                android:textSize="14sp" />
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tastes"
+                    android:textColor="@color/material_theme_sys_dark_on_surface"
+                    android:textSize="22sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/tastes_chip_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <Button
+                    android:id="@+id/tastes_show_more_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/filter_show_more_button_unfold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/material_theme_sys_dark_primary"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="36dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/formats"
+                    android:textColor="@color/material_theme_sys_dark_on_surface"
+                    android:textSize="22sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/formats_chip_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    tools:visibility="visible" />
+
+                <Button
+                    android:id="@+id/formats_show_more_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/filter_show_more_button_unfold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/material_theme_sys_dark_primary"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </LinearLayout>
         </LinearLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="36dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Крепость напитка"
-                android:textColor="@color/material_theme_sys_dark_on_surface"
-                android:textSize="22sp" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="24dp" />
-
-            <com.google.android.material.chip.ChipGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Тег"
-                    android:textColor="@color/material_theme_sys_dark_on_surface_variant"
-                    android:textSize="14sp"
-                    app:chipBackgroundColor="@color/material_theme_sys_dark_surface_container_low"
-                    app:chipStrokeColor="@color/material_theme_sys_dark_on_surface_variant"
-                    app:chipStrokeWidth="1dp" />
-
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Тег 2"
-                    android:textColor="@color/material_theme_sys_dark_on_secondary_container"
-                    android:textSize="14sp"
-                    app:chipBackgroundColor="@color/material_theme_sys_dark_secondary_container"
-                    app:chipStrokeColor="@color/material_theme_sys_dark_on_surface_variant"
-                    app:chipStrokeWidth="1dp" />
-            </com.google.android.material.chip.ChipGroup>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="24dp" />
-
-            <Button
-                android:id="@+id/button7"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Показать все"
-                android:textAllCaps="false"
-                android:textColor="@color/material_theme_sys_dark_primary"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Вкус"
-                android:textColor="@color/material_theme_sys_dark_on_surface"
-                android:textSize="22sp" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="24dp" />
-
-            <com.google.android.material.chip.ChipGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Тег"
-                    android:textColor="@color/material_theme_sys_dark_on_surface_variant"
-                    android:textSize="14sp"
-                    app:chipBackgroundColor="@color/material_theme_sys_dark_surface_container_low"
-                    app:chipStrokeColor="@color/material_theme_sys_dark_on_surface_variant"
-                    app:chipStrokeWidth="1dp" />
-
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Тег 2"
-                    android:textColor="@color/material_theme_sys_dark_on_secondary_container"
-                    android:textSize="14sp"
-                    app:chipBackgroundColor="@color/material_theme_sys_dark_secondary_container"
-                    app:chipStrokeColor="@color/material_theme_sys_dark_on_surface_variant"
-                    app:chipStrokeWidth="1dp" />
-            </com.google.android.material.chip.ChipGroup>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="24dp" />
-
-            <Button
-                android:id="@+id/button8"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Показать все"
-                android:textAllCaps="false"
-                android:textColor="@color/material_theme_sys_dark_primary"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView16"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Формат"
-                android:textColor="@color/material_theme_sys_dark_on_surface"
-                android:textSize="22sp" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="24dp" />
-
-            <com.google.android.material.chip.ChipGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Тег"
-                    android:textColor="@color/material_theme_sys_dark_on_surface_variant"
-                    android:textSize="14sp"
-                    app:chipBackgroundColor="@color/material_theme_sys_dark_surface_container_low"
-                    app:chipStrokeColor="@color/material_theme_sys_dark_on_surface_variant"
-                    app:chipStrokeWidth="1dp" />
-
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Тег 2"
-                    android:textColor="@color/material_theme_sys_dark_on_secondary_container"
-                    android:textSize="14sp"
-                    app:chipBackgroundColor="@color/material_theme_sys_dark_secondary_container"
-                    app:chipStrokeColor="@color/material_theme_sys_dark_on_surface_variant"
-                    app:chipStrokeWidth="1dp" />
-            </com.google.android.material.chip.ChipGroup>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="24dp" />
-
-            <Button
-                android:id="@+id/button9"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Показать все"
-                android:textAllCaps="false"
-                android:textColor="@color/material_theme_sys_dark_primary"
-                android:textSize="14sp" />
-        </LinearLayout>
-    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 </androidx.cardview.widget.CardView>
