@@ -8,8 +8,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
+import ru.partyshaker.partyshaker.R
 import ru.partyshaker.partyshaker.databinding.FragmentCocktailsBinding
 
 @AndroidEntryPoint
@@ -18,8 +20,8 @@ class CocktailsFragment : Fragment() {
     private lateinit var binding: FragmentCocktailsBinding
     private val TAG = "CocktailsFragment"
 
-    private val viewModel by viewModels<ru.partyshaker.partyshaker.ui.features.cocktails.ui.ViewModelCocktails>()
-    private val cocktailAdapter: ru.partyshaker.partyshaker.ui.features.cocktails.ui.AdapterCocktailsList by lazy { ru.partyshaker.partyshaker.ui.features.cocktails.ui.AdapterCocktailsList() }
+    private val viewModel by viewModels<ViewModelCocktails>()
+    private val cocktailAdapter: AdapterCocktailsList by lazy { AdapterCocktailsList() }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,6 +44,10 @@ class CocktailsFragment : Fragment() {
                 cocktailAdapter.submitList(it)
             }
         })
+
+        binding.cocktailsFilter.setOnClickListener{
+            findNavController().navigate(R.id.action_cocktailsFragment_to_cocktailsFilterFragment)
+        }
 
         viewModel.errorMessage.observe(viewLifecycleOwner, Observer {
             Log.d(TAG, it.toString())

@@ -96,7 +96,7 @@
                 app:cardCornerRadius="50dp">
 
                 <ImageButton
-                    android:id="@+id/button11"
+                    android:id="@+id/cocktails_filter"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"

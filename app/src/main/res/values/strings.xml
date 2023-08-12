@@ -24,4 +24,27 @@
     <string name="title_cocktails">Коктейли</string>
     <string name="title_ingredients">Ингридиенты</string>
     <string name="title_mybar">Мой бар</string>
+
+    <!-- Cocktails filter categories -->
+    <string name="complexities">Сложность</string>
+    <string name="strengths">Крепость напитка</string>
+    <string name="tastes">Вкус</string>
+    <string name="formats">Формат</string>
+
+    <!-- Cocktails filter ingredients -->
+    <string name="ingredients">Ингредиенты</string>
+
+    <!-- Cocktails filter -->
+    <string name="hint">Поиск</string>
+
+    <!-- Cocktails filter containers height -->
+    <string name="filter_show_more_button_unfold">Показать все</string>
+    <string name="filter_show_more_button_fold">Свернуть</string>
+
+    <!-- Cocktails filter category keys -->
+    <string name="complexities_key">complexities</string>
+    <string name="strengths_key">strengths</string>
+    <string name="tastes_key">tastes</string>
+    <string name="formats_key">formats</string>
+    <string name="ingredients_key">ingredients</string>
 </resources>

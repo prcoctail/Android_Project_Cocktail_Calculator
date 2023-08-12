@@ -37,7 +37,19 @@
         android:id="@+id/cocktailsFragment"
         android:name="ru.partyshaker.partyshaker.ui.features.cocktails.ui.CocktailsFragment"
         android:label="fragment_cocktails"
-        tools:layout="@layout/fragment_cocktails" />
+        tools:layout="@layout/fragment_cocktails" >
+
+        <action
+            android:id="@+id/action_cocktailsFragment_to_cocktailsFilterFragment"
+            app:destination="@id/cocktailsFilterFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cocktailsFilterFragment"
+        android:name="ru.partyshaker.partyshaker.ui.features.cocktails.ui.filter.CocktailsFilterFragment"
+        android:label="fragment_cocktails_filter"
+        tools:layout="@layout/fragment_cocktails_filter" />
+
     <fragment
         android:id="@+id/cocktailCardFragment"
         android:name="ru.partyshaker.partyshaker.ui.features.cocktails.ui.CocktailCardFragment"
