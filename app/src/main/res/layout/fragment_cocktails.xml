@@ -2,22 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:background="@color/background_color"
     android:orientation="vertical"
     android:paddingHorizontal="16dp"
     tools:context=".ui.features.cocktails.ui.CocktailsFragment">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cocktails_banner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/material_theme_sys_dark_surface_container_low"
         app:cardCornerRadius="24dp">
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:clipToPadding="false"
             android:padding="12dp">
 
@@ -28,7 +29,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView17"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Для новеньких барменов"
@@ -40,7 +40,6 @@
                     android:layout_height="8dp" />
 
                 <TextView
-                    android:id="@+id/textView18"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Здесь представлены все виды коктейлей. Вы легко сможете найти необходимый с помощью поиска и фильтров"
@@ -49,18 +48,16 @@
             </LinearLayout>
 
             <ImageButton
-                android:id="@+id/imageView2"
+                android:id="@+id/cocktail_banner_close_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:background="@android:color/transparent"
-                android:paddingHorizontal="2dp"
+                android:background="@drawable/cocktails_banner_close_button_shape"
                 android:src="@drawable/baseline_close_24"
-                app:tint="@color/material_theme_sys_dark_on_surface_variant" />
+                app:tint="@color/material_theme_sys_dark_on_secondary_container" />
 
             <ImageView
-                android:id="@+id/imageView3"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_alignParentEnd="true"
@@ -84,25 +81,17 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="horizontal">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.25"
-                android:backgroundTint="@color/material_theme_sys_dark_surface_container_highest"
-                android:paddingHorizontal="4dp"
-                app:cardCornerRadius="50dp">
 
                 <ImageButton
                     android:id="@+id/cocktails_filter"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@android:color/transparent"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/cocktails_filter_button_shape"
                     android:src="@drawable/baseline_filter"
-                    app:tint="@color/material_theme_sys_dark_primary" />
-            </androidx.cardview.widget.CardView>
+                    app:tint="@color/cocktails_filter_button_color" />
 
             <Space
                 android:layout_width="12dp"
@@ -113,7 +102,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:hint="Поиск"
-                android:textColorHint="@color/material_theme_sys_dark_on_surface_variant">
+                android:textColorHint="@color/material_theme_sys_dark_on_surface_variant"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -121,10 +112,10 @@
                     android:background="@android:color/transparent"
                     android:paddingStart="0dp"
                     android:singleLine="true"
-                    android:text="HELLO"
                     android:textAlignment="textStart"
                     android:textColor="@color/material_theme_sys_dark_on_surface_variant"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    tools:text="HELLO" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Space
@@ -132,11 +123,11 @@
                 android:layout_height="match_parent" />
 
             <ImageButton
-                android:id="@+id/button10"
+                android:id="@+id/cocktails_search_button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
-                android:background="@android:color/transparent"
+                android:background="@drawable/cocktails_search_button_shape"
                 android:padding="12dp"
                 android:src="@drawable/ic_search"
                 app:tint="@color/material_theme_sys_dark_on_surface_variant" />
@@ -148,11 +139,10 @@
         android:layout_height="12dp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview_cocktails"
+        android:id="@+id/cocktails_recycler"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:itemCount="3"
+        tools:itemCount="5"
         tools:listitem="@layout/cocktail_item" />
-
 </LinearLayout>
