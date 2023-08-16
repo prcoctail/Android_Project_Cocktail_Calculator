@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:backgroundTint="@color/material_theme_sys_dark_surface_container_low"
@@ -31,19 +32,20 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="6dp"
                     android:backgroundTint="@color/material_theme_sys_dark_surface_container_high"
-                    android:text="4,6"
                     android:textColor="@color/material_theme_sys_dark_primary"
                     android:textSize="14sp"
                     app:cornerRadius="100dp"
                     app:icon="@drawable/baseline_star_24"
                     app:iconSize="20sp"
-                    app:iconTint="@color/material_theme_sys_dark_primary" />
+                    app:iconTint="@color/material_theme_sys_dark_primary"
+                    android:text="4,6" />
 
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="308dp"
                     android:layout_height="308dp"
                     android:layout_centerInParent="true"
+                    android:contentDescription="@string/cocktail_card_image"
                     app:srcCompat="@drawable/cocktail_img" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -60,9 +62,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:gravity="start"
-                android:text="Название коктейля"
                 android:textColor="@color/material_theme_sys_dark_on_surface"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                tools:text="Название коктейля" />
 
             <com.google.android.material.chip.ChipGroup
                 android:layout_width="match_parent"
@@ -89,9 +91,9 @@
                     android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Описание коктейля"
                     android:textColor="@color/material_theme_sys_dark_on_surface"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:text="Описание коктейля" />
 
                 <Button
                     android:id="@+id/button4"
@@ -99,10 +101,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_marginTop="4dp"
-                    android:text="Показать полностью"
                     android:textAllCaps="false"
                     android:textColor="@color/material_theme_sys_dark_primary"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    tools:text="@string/filter_show_more_button_unfold" />
             </LinearLayout>
 
         </LinearLayout>

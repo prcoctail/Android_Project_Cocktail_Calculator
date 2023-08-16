@@ -13,6 +13,7 @@
         <item name="android:statusBarColor">@color/background_color</item>
         <!-- Customize your theme here. -->
         <item name="buttonStyle">@style/CommonButtonStyle</item>
+        <item name="windowActionBar">false</item>
     </style>
 
     <style name="TextInputLayoutAppearance">

@@ -21,9 +21,14 @@
     <string name="password_length_error_text">Ваш пароль должен содержать не менее 8-ми символов</string>
     <string name="empty_email_error_text">Введите адрес электронной почты</string>
     <string name="wrong_email_format_text">Неправельный формат электронной почты</string>
+
+    <!-- Titles -->
     <string name="title_cocktails">Коктейли</string>
-    <string name="title_ingredients">Ингридиенты</string>
-    <string name="title_mybar">Мой бар</string>
+    <string name="title_cocktail">Коктейль</string>
+    <string name="title_ingredients">Ингредиенты</string>
+    <string name="title_my_bar">Мой бар</string>
+    <string name="title_cocktails_filter">Фильтры</string>
+    <string name="title_auth">Аутентификация</string>
 
     <!-- Cocktails filter categories -->
     <string name="complexities">Сложность</string>
@@ -31,11 +36,11 @@
     <string name="tastes">Вкус</string>
     <string name="formats">Формат</string>
 
-    <!-- Cocktails filter ingredients -->
-    <string name="ingredients">Ингредиенты</string>
-
     <!-- Cocktails filter -->
-    <string name="hint">Поиск</string>
+    <string name="cocktails_filter_search_hint">Поиск</string>
+    <string name="search_icon">search_icon</string>
+    <string name="cocktails_filter_cancel_button">Сбросить все фильтры</string>
+    <string name="cocktails_filter_apply_button">Показать результат</string>
 
     <!-- Cocktails filter containers height -->
     <string name="filter_show_more_button_unfold">Показать все</string>
@@ -47,4 +52,14 @@
     <string name="tastes_key">tastes</string>
     <string name="formats_key">formats</string>
     <string name="ingredients_key">ingredients</string>
+
+    <!-- Cocktail card -->
+    <string name="cocktail_card_image">Изображение коктейля</string>
+    <string name="cocktail_card_ingredients_hint">Нажмите на ингредиент, чтобы добавить его в список покупок</string>
+    <string name="minus_icon">minus_icon</string>
+    <string name="plus_icon">plus_icon</string>
+
+    <!-- Cocktail card titles -->
+    <string name="cocktail_card_ingredients_servings_title">Количество порций</string>
+    <string name="cocktails_card_cooking_steps_title">Приготовление</string>
 </resources>

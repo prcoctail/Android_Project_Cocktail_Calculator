@@ -3,12 +3,12 @@ package ru.partyshaker.partyshaker.ui.features.cocktails.ui
 import android.widget.ImageButton
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import ru.partyshaker.partyshaker.databinding.CocktailItemBinding
+import ru.partyshaker.partyshaker.databinding.CocktailCardListItemBinding
 import ru.partyshaker.partyshaker.ui.features.cocktails.data.data_classes.Cocktail
 
-class CocktailsViewHolder(val view: CocktailItemBinding) :
+class CocktailsViewHolder(val view: CocktailCardListItemBinding) :
     RecyclerView.ViewHolder(view.root) {
-    private val binding = CocktailItemBinding.bind(view.root)
+    private val binding = CocktailCardListItemBinding.bind(view.root)
 
     fun bind(cocktail: Cocktail, listener: CocktailsAdapter.Listener) = with(binding) {
         cocktailName.text = cocktail.name
@@ -40,7 +40,7 @@ class CocktailsViewHolder(val view: CocktailItemBinding) :
         cocktailTags.text = tags.toString().removePrefix("[").removeSuffix("]")
 
         itemView.setOnClickListener {
-            listener.onClick(cocktail)
+            listener.navigateToCocktailDetails(cocktail)
         }
     }
 

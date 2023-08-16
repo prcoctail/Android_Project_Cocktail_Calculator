@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/background_color"
     android:orientation="vertical"
@@ -10,7 +10,7 @@
     tools:context=".ui.features.cocktails.ui.CocktailsFragment">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cocktails_banner"
+        android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/material_theme_sys_dark_surface_container_low"
@@ -48,7 +48,7 @@
             </LinearLayout>
 
             <ImageButton
-                android:id="@+id/cocktail_banner_close_button"
+                android:id="@+id/banner_close_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -84,14 +84,14 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/cocktails_filter"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.25"
-                    android:background="@drawable/cocktails_filter_button_shape"
-                    android:src="@drawable/baseline_filter"
-                    app:tint="@color/cocktails_filter_button_color" />
+            <ImageButton
+                android:id="@+id/cocktails_filter_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.15"
+                android:background="@drawable/cocktails_filter_button_shape"
+                android:src="@drawable/baseline_filter"
+                app:tint="@color/cocktails_filter_button_color" />
 
             <Space
                 android:layout_width="12dp"
@@ -144,5 +144,5 @@
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:itemCount="5"
-        tools:listitem="@layout/cocktail_item" />
+        tools:listitem="@layout/cocktail_card_list_item" />
 </LinearLayout>

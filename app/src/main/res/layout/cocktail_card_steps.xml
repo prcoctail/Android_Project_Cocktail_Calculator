@@ -18,10 +18,10 @@
             android:layout_marginBottom="16dp"
             android:paddingHorizontal="8dp"
             android:paddingTop="8dp"
-            android:text="Приготовление"
+            android:text="@string/cocktails_card_cooking_steps_title"
             android:textColor="@color/material_theme_sys_dark_on_surface"
             android:textSize="24sp" />
 
-        <include layout="@layout/fragment_cocktail_card_steps_list" />
+        <include layout="@layout/cocktail_card_serving_steps_list" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
