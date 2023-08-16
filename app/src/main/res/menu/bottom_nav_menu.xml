@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/cocktailsFragment"
+        android:id="@+id/cocktails_navigation"
         android:icon="@drawable/navig_cocktails"
         android:title="@string/title_cocktails" />
     <item
-        android:id="@+id/authorizationFragment"
+        android:id="@+id/ingredients_navigation"
         android:icon="@drawable/navig_ingredients"
         android:title="@string/title_ingredients" />
     <item
-        android:id="@+id/mainFragment"
+        android:id="@+id/my_bar_navigation"
         android:icon="@drawable/navig_my_bar"
-        android:title="@string/title_mybar"/>
+        android:title="@string/title_my_bar"/>
 
 </menu>

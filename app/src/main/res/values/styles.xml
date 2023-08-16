@@ -54,4 +54,12 @@
         <item name="chipBackgroundColor">@color/cocktails_filter_chip_background</item>
         <item name="chipStrokeWidth">1dp</item>
     </style>
+
+    <style name="CocktailsFilterTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabBackground">@drawable/cocktails_filter_tabs_selector</item>
+        <item name="tabIndicator">@null</item>
+        <item name="android:background">@drawable/cocktails_filter_tab_layout_bg</item>
+        <item name="tabSelectedTextColor">@color/material_theme_sys_dark_on_surface</item>
+        <item name="tabTextColor">@color/material_theme_sys_dark_on_surface_variant</item>
+    </style>
 </resources>

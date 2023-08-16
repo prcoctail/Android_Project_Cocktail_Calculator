@@ -1,15 +1,13 @@
 package ru.partyshaker.partyshaker.di
 
-import androidx.lifecycle.SavedStateHandle
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import ru.partyshaker.partyshaker.ui.features.cocktails.api.CocktailsService
 import ru.partyshaker.partyshaker.ui.features.cocktails.data.repository.CocktailsFilterRepositoryImpl
-import ru.partyshaker.partyshaker.ui.features.cocktails.ui.filter.CocktailsFilterCategoriesViewModel
+import ru.partyshaker.partyshaker.ui.features.cocktails.data.repository.CocktailsRepositoryImpl
 import javax.inject.Singleton
 
 @Module
@@ -21,8 +19,13 @@ object ApiModule {
 
     @Provides
     @Singleton
-    fun provideRepository(cocktailsService: CocktailsService): CocktailsFilterRepositoryImpl =
+    fun provideCocktailsFilterRepository(cocktailsService: CocktailsService): CocktailsFilterRepositoryImpl =
         CocktailsFilterRepositoryImpl(cocktailsService)
+
+    @Provides
+    @Singleton
+    fun provideCocktailsRepository(cocktailsService: CocktailsService): CocktailsRepositoryImpl =
+        CocktailsRepositoryImpl(cocktailsService)
 
     @Provides
     @Singleton

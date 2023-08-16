@@ -6,30 +6,38 @@
     android:layout_height="match_parent"
     android:background="@color/background_color"
     android:orientation="vertical"
-    tools:context=".ui.features.cocktails.ui.filter.CocktailsFilterFragment">
+    tools:context=".ui.features.cocktails_filter.ui.CocktailsFilterFragment">
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tab_layout"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:background="@color/background_color"
-        app:tabGravity="fill"
-        app:tabMode="fixed" />
+        android:layout_marginHorizontal="16dp"
+        app:cardCornerRadius="50dp">
 
-    <!-- android:layout_alignParentEnd="true" -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            style="@style/CocktailsFilterTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+    </com.google.android.material.card.MaterialCardView>
+
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/cardView"
-        android:layout_below="@id/tab_layout" />
+        android:layout_below="@id/card_view"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="16dp"
         android:backgroundTint="@color/material_theme_sys_dark_surface_container_low"
         app:cardCornerRadius="28dp">
 
@@ -47,7 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Сбросить все фильтры"
+                android:text="@string/cocktails_filter_cancel_button"
                 android:textAllCaps="false"
                 android:textColor="@color/material_theme_sys_dark_error"
                 android:textSize="14sp" />
@@ -57,7 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/material_theme_sys_dark_primary"
-                android:text="Показать результат (265)"
+                android:text="@string/cocktails_filter_apply_button"
                 android:textAllCaps="false"
                 android:textColor="@color/material_theme_sys_dark_on_primary"
                 android:textSize="14sp"

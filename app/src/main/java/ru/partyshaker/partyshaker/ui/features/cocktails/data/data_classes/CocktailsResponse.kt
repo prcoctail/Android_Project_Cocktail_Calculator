@@ -10,5 +10,5 @@ data class CocktailsResponse(
 //    @SerializedName("previous")
 //    val previous: String?,
     @SerializedName("results")
-    val results: List<Cocktail>
+    val cocktails: List<Cocktail>
 )
