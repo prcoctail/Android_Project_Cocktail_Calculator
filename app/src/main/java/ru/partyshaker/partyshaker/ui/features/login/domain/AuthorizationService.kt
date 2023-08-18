@@ -10,7 +10,7 @@ interface AuthorizationService {
     @POST("/api/auth/token/login")
     suspend fun login(
         @Body loginRequest: LoginRequest
-    ): Response<ru.partyshaker.partyshaker.ui.features.login.data.AuthTokenResponse>
+    ): Response<AuthTokenResponse>
 }
 
 

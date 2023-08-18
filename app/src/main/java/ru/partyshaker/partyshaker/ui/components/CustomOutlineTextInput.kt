@@ -9,10 +9,9 @@ import android.view.LayoutInflater
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.constraintlayout.widget.ConstraintLayout
 import ru.partyshaker.partyshaker.R
+import ru.partyshaker.partyshaker.databinding.CustomOutlineTextInputBinding
 
-import ru.partyshaker.partyshaker.databinding.TextInputCustomViewBinding
-
-class TextInputCustomView @JvmOverloads constructor(
+class CustomOutlineTextInput @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0,
@@ -26,12 +25,12 @@ class TextInputCustomView @JvmOverloads constructor(
         const val EMAIL_INPUT_STATE = "4"
     }
 
-    private val binding: TextInputCustomViewBinding
+    private val binding: CustomOutlineTextInputBinding
 
     init {
         val inflater = LayoutInflater.from(context)
-        inflater.inflate(R.layout.text_input_custom_view, this, true)
-        binding = TextInputCustomViewBinding.bind(this)
+        inflater.inflate(R.layout.custom_outline_text_input, this, true)
+        binding = CustomOutlineTextInputBinding.bind(this)
         initializeAttributes(attrs, defStyleAttr, defStyleRes)
     }
 

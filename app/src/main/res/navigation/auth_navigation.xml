@@ -7,7 +7,37 @@
 
     <fragment
         android:id="@+id/authorizationFragment"
-        android:name="ru.partyshaker.partyshaker.ui.features.auth.AuthorizationFragment"
+        android:name="ru.partyshaker.partyshaker.ui.features.auth.AuthFragment"
         android:label="@string/title_auth"
-        tools:layout="@layout/fragment_authorization" />
+        tools:layout="@layout/fragment_auth">
+        <action
+            android:id="@+id/action_authorizationFragment_to_passRecoveryFirstStepFragment"
+            app:destination="@id/passRecoveryFirstStepFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passRecoveryFirstStepFragment"
+        android:name="ru.partyshaker.partyshaker.ui.features.auth.passRestore.firstStep.PassRestoreFirstStepFragment"
+        android:label="@string/title_auth_pass_recovery">
+        <action
+            android:id="@+id/action_passRecoveryFirstStepFragment_to_passRecoverySecondStepFragment"
+            app:destination="@id/passRecoverySecondStepFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passRecoverySecondStepFragment"
+        android:name="ru.partyshaker.partyshaker.ui.features.auth.passRestore.secondStep.PassRestoreSecondStepFragment"
+        android:label="@string/title_auth_pass_recovery">
+        <action
+            android:id="@+id/action_passRecoverySecondStepFragment_to_passRecoveryThirdStepFragment"
+            app:destination="@id/passRecoveryThirdStepFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passRecoveryThirdStepFragment"
+        android:name="ru.partyshaker.partyshaker.ui.features.auth.passRestore.thirdStep.PassRestoreThirdStepFragment"
+        android:label="@string/title_auth_pass_recovery" >
+        <action
+            android:id="@+id/action_passRecoveryThirdStepFragment_to_authorizationFragment"
+            app:destination="@id/authorizationFragment"
+            app:popUpTo="@id/authorizationFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

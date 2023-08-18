@@ -8,23 +8,32 @@ import android.text.style.ClickableSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import ru.partyshaker.partyshaker.R
-import ru.partyshaker.partyshaker.databinding.FragmentRegisterBinding
+import ru.partyshaker.partyshaker.databinding.AuthRegisterBinding
+import ru.partyshaker.partyshaker.databinding.FragmentAuthBinding
 
 class RegisterFragment : Fragment() {
 
-    private var _binding: FragmentRegisterBinding? = null
-    private val binding get() = requireNotNull(_binding)
+    private lateinit var binding: AuthRegisterBinding
+    private lateinit var policy: CheckBox
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentRegisterBinding.inflate(inflater, container, false)
+        binding = AuthRegisterBinding.inflate(inflater, container, false)
+        policy = binding.policy
+//        setupPolicyLink()
 
-        setupPolicyLink()
+        policy.setLinkTextColor(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.material_theme_sys_dark_primary
+            )
+        )
 
         return binding.root
     }
@@ -52,8 +61,8 @@ class RegisterFragment : Fragment() {
             endIndex,
             Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
         )
-        binding.tvPolicyLabel.text = spannableString
-        binding.tvPolicyLabel.setLinkTextColor(
+        policy.text = spannableString
+        policy.setLinkTextColor(
             ContextCompat.getColor(
                 requireContext(),
                 R.color.material_theme_sys_dark_primary
@@ -64,10 +73,5 @@ class RegisterFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         binding.root.requestLayout()
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

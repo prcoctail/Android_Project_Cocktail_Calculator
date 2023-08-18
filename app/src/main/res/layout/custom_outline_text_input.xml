@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+    android:layout_height="match_parent">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textField"
-        style="@style/MyOutlinedBox"
+        style="@style/CustomOutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/label"
@@ -20,7 +18,7 @@
         app:shapeAppearanceOverlay="@style/TextInputLayoutAppearance"
         app:startIconDrawable="@drawable/ic_search">
 
-        <androidx.appcompat.widget.AppCompatEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,5 +26,4 @@
             android:maxLines="1"
             android:textColor="@color/material_theme_sys_dark_on_surface" />
     </com.google.android.material.textfield.TextInputLayout>
-
 </merge>

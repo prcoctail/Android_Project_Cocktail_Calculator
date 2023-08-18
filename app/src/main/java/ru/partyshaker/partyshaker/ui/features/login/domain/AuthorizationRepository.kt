@@ -1,14 +1,15 @@
 package ru.partyshaker.partyshaker.ui.features.login.domain
 
 import com.google.gson.Gson
+import ru.partyshaker.partyshaker.ui.features.login.data.ErrorResponse
 
 import javax.inject.Inject
 
 class AuthorizationRepository @Inject constructor(
-    private val retrofitService: ru.partyshaker.partyshaker.ui.features.login.domain.AuthorizationService
+    private val retrofitService: AuthorizationService
 ) {
     private val gson = Gson()
-    suspend fun login(loginRequest: ru.partyshaker.partyshaker.ui.features.login.domain.LoginRequest): Result<String> {
+    suspend fun login(loginRequest: LoginRequest): Result<String> {
         val tokenResponse = retrofitService.login(loginRequest)
 
        return Result.failure(Throwable())
@@ -16,10 +17,10 @@ class AuthorizationRepository @Inject constructor(
 
     private fun parseErrorMessage(json: String?): String {
         return try {
-            val errorResponse = gson.fromJson(json, ru.partyshaker.partyshaker.ui.features.login.data.ErrorResponse::class.java)
-            errorResponse?.error ?: ru.partyshaker.partyshaker.ui.features.login.domain.AuthorizationRepository.Companion.UNKNOWN_ERROR
+            val errorResponse = gson.fromJson(json, ErrorResponse::class.java)
+            errorResponse?.error ?: UNKNOWN_ERROR
         } catch (e: Exception) {
-            ru.partyshaker.partyshaker.ui.features.login.domain.AuthorizationRepository.Companion.UNKNOWN_ERROR
+            UNKNOWN_ERROR
         }
     }
 
