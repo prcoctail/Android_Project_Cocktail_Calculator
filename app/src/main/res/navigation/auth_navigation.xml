@@ -13,31 +13,54 @@
         <action
             android:id="@+id/action_authorizationFragment_to_passRecoveryFirstStepFragment"
             app:destination="@id/passRecoveryFirstStepFragment" />
+        <action
+            android:id="@+id/action_authorizationFragment_to_authAccActivationFragment"
+            app:destination="@id/authAccActivationFragment" />
+        <argument
+            android:name="email"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/passRecoveryFirstStepFragment"
-        android:name="ru.partyshaker.partyshaker.ui.features.auth.passRestore.firstStep.PassRestoreFirstStepFragment"
-        android:label="@string/title_auth_pass_recovery">
+        android:name="ru.partyshaker.partyshaker.ui.features.auth.PassRestoreFirstStepFragment"
+        android:label="@string/title_pass_recovery"
+        tools:layout="@layout/auth_pass_restore_first_step">
         <action
             android:id="@+id/action_passRecoveryFirstStepFragment_to_passRecoverySecondStepFragment"
-            app:destination="@id/passRecoverySecondStepFragment" />
+            app:destination="@id/passRecoverySecondStepFragment"
+            app:popUpTo="@id/passRecoveryFirstStepFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="email"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/passRecoverySecondStepFragment"
-        android:name="ru.partyshaker.partyshaker.ui.features.auth.passRestore.secondStep.PassRestoreSecondStepFragment"
-        android:label="@string/title_auth_pass_recovery">
+        android:name="ru.partyshaker.partyshaker.ui.features.auth.PassRestoreSecondStepFragment"
+        android:label="@string/title_pass_recovery"
+        tools:layout="@layout/auth_pass_restore_second_step">
         <action
             android:id="@+id/action_passRecoverySecondStepFragment_to_passRecoveryThirdStepFragment"
             app:destination="@id/passRecoveryThirdStepFragment" />
+        <argument
+            android:name="email"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/passRecoveryThirdStepFragment"
-        android:name="ru.partyshaker.partyshaker.ui.features.auth.passRestore.thirdStep.PassRestoreThirdStepFragment"
-        android:label="@string/title_auth_pass_recovery" >
-        <action
-            android:id="@+id/action_passRecoveryThirdStepFragment_to_authorizationFragment"
-            app:destination="@id/authorizationFragment"
-            app:popUpTo="@id/authorizationFragment"
-            app:popUpToInclusive="true" />
+        android:name="ru.partyshaker.partyshaker.ui.features.auth.PassRestoreThirdStepFragment"
+        android:label="@string/title_pass_recovery"
+        tools:layout="@layout/auth_pass_restore_third_step"/>
+    <fragment
+        android:id="@+id/authAccActivationFragment"
+        android:name="ru.partyshaker.partyshaker.ui.features.auth.AuthAccActivationFragment"
+        android:label="@string/title_acc_activation"
+        tools:layout="@layout/auth_acc_activation"  >
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="pass"
+            app:argType="string" />
     </fragment>
 </navigation>

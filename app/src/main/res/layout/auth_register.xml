@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:backgroundTint="@color/material_theme_sys_dark_surface_container_low"
     app:cardCornerRadius="28dp">
 
@@ -16,7 +16,7 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/auth_register_title"
+            android:text="@string/title_register"
             android:textColor="@color/material_theme_sys_dark_on_surface"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -35,16 +35,6 @@
             app:layout_constraintTop_toBottomOf="@id/title" />
 
         <ru.partyshaker.partyshaker.ui.components.CustomOutlineTextInput
-            android:id="@+id/nickname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:hintText="@string/nickname"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/email" />
-
-        <ru.partyshaker.partyshaker.ui.components.CustomOutlineTextInput
             android:id="@+id/pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -53,43 +43,57 @@
             app:inputType="password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/nickname" />
+            app:layout_constraintTop_toBottomOf="@id/email" />
 
         <ru.partyshaker.partyshaker.ui.components.CustomOutlineTextInput
-            android:id="@+id/pass_confirm"
+            android:id="@+id/re_pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            app:hintText="@string/repeat_password"
+            app:hintText="@string/password_repeated"
             app:inputType="password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/pass" />
 
         <TextView
-            android:id="@+id/error"
+            android:id="@+id/responseError"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/account_exists_error"
             android:textColor="@color/material_theme_sys_dark_error"
-            android:visibility="visible"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/pass_confirm"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/re_pass"
+            tools:text="Эта почта уже используется"
             tools:visibility="visible" />
 
-        <androidx.appcompat.widget.AppCompatCheckBox
-            android:id="@+id/policy"
-            android:layout_width="wrap_content"
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:buttonTint="@color/material_theme_sys_dark_primary"
-            android:padding="5dp"
-            android:text="@string/privacy_policy_label"
-            android:textColor="@color/material_theme_sys_dark_on_surface"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/error" />
+            app:layout_constraintTop_toBottomOf="@+id/responseError">
+
+            <CheckBox
+                android:id="@+id/agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/material_theme_sys_dark_primary" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/agreementText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColorLink="@color/material_theme_sys_dark_primary"
+                android:text="@string/privacy_policy_label"
+                android:textColor="@color/material_theme_sys_dark_on_surface" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/nav_auth"
@@ -97,10 +101,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/sign_up"
+            android:text="@string/register_apply_button"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/policy" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

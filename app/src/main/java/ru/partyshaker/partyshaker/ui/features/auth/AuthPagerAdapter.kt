@@ -5,8 +5,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import ru.partyshaker.partyshaker.R
-import ru.partyshaker.partyshaker.ui.features.auth.login.LoginFragment
-import ru.partyshaker.partyshaker.ui.features.auth.register.RegisterFragment
 
 class AuthPagerAdapter(fragmentActivity: FragmentActivity, val context: Context) :
     FragmentStateAdapter(fragmentActivity) {
@@ -34,11 +32,11 @@ class AuthPagerAdapter(fragmentActivity: FragmentActivity, val context: Context)
 
         when (position) {
             0 -> {
-                title =  context.resources.getString(R.string.auth_login_title);
+                title =  context.resources.getString(R.string.title_login);
             }
 
             1 -> {
-                title =  context.resources.getString(R.string.auth_register_title);
+                title =  context.resources.getString(R.string.title_register);
             }
         }
         return title

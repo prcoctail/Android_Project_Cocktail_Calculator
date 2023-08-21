@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/pass_recovery_second_step_title"
+            android:text="@string/acc_title"
             android:textColor="@color/material_theme_sys_dark_on_surface"
             android:textSize="22sp" />
 
@@ -29,7 +29,7 @@
             android:layout_marginTop="24dp"
             android:textColor="@color/material_theme_sys_dark_on_surface"
             android:textSize="16sp"
-            tools:text="@string/pass_recovery_second_step_email_sent_label" />
+            tools:text="@string/acc_email_sent_label" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -51,7 +51,7 @@
             tools:visibility="visible" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/resend_activation_link"
+            android:id="@+id/auth_acc_resend_button"
             style="@style/CustomSecondButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -61,12 +61,12 @@
             android:textSize="14sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/nav_pass_restore_third_step"
+            android:id="@+id/nav_my_bar"
             style="@style/FilledPrimeButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="@string/pass_recovery_apply_button"
+            android:text="@string/acc_apply_button"
             android:textAllCaps="false"
             android:textSize="14sp" />
     </androidx.appcompat.widget.LinearLayoutCompat>

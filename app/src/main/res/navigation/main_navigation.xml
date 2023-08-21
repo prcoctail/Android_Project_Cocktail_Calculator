@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_navigation"
     app:startDestination="@+id/cocktails_navigation">
+
     <include app:graph="@navigation/cocktails_navigation" />
     <include app:graph="@navigation/ingredients_navigation" />
     <include app:graph="@navigation/my_bar_navigation" />

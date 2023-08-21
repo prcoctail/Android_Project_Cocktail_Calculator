@@ -1,4 +1,4 @@
-package ru.partyshaker.partyshaker.ui.features.auth.passRestore.secondStep
+package ru.partyshaker.partyshaker.ui.features.auth
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,20 +9,20 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import ru.partyshaker.partyshaker.R
-import ru.partyshaker.partyshaker.databinding.AuthPassRestoreSecondStepBinding
+import ru.partyshaker.partyshaker.databinding.AuthPassRestoreThirdStepBinding
 
 @AndroidEntryPoint
-class PassRestoreSecondStepFragment : Fragment(), View.OnClickListener {
+class PassRestoreThirdStepFragment : Fragment(), View.OnClickListener {
 
-    private lateinit var binding: AuthPassRestoreSecondStepBinding
+    private lateinit var binding: AuthPassRestoreThirdStepBinding
     private lateinit var applyButton: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = AuthPassRestoreSecondStepBinding.inflate(inflater, container, false)
-        applyButton = binding.navPassRestoreThirdStep
+        binding = AuthPassRestoreThirdStepBinding.inflate(inflater, container, false)
+        applyButton = binding.navAuth
 
         applyButton.setOnClickListener(this)
 
@@ -32,7 +32,7 @@ class PassRestoreSecondStepFragment : Fragment(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v?.id) {
             applyButton.id -> {
-                findNavController().navigate(R.id.action_passRecoverySecondStepFragment_to_passRecoveryThirdStepFragment)
+                findNavController().popBackStack(R.id.authorizationFragment, false)
             }
         }
     }

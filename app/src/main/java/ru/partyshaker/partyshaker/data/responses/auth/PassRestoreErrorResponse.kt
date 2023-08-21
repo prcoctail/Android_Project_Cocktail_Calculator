@@ -1,8 +1,8 @@
-package ru.partyshaker.partyshaker.ui.features.login.data
+package ru.partyshaker.partyshaker.data.responses.auth
 
 import com.google.gson.annotations.SerializedName
 
-data class ErrorResponse(
+data class PassRestoreErrorResponse(
     @SerializedName("error")
     val error: String
-    )
+)

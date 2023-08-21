@@ -3,29 +3,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginTop="20dp"
     android:backgroundTint="@color/material_theme_sys_dark_surface_container_low"
     app:cardCornerRadius="28dp">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:orientation="vertical">
+        android:padding="20dp">
 
         <TextView
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/auth_pass_recovery_first_step_title"
+            android:text="@string/pass_recovery_first_step_title"
             android:textColor="@color/material_theme_sys_dark_on_surface"
-            android:textSize="22sp" />
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="@string/auth_pass_recovery_first_step_info"
+            android:layout_marginTop="16dp"
+            android:text="@string/pass_recovery_first_step_label"
             android:textColor="@color/material_theme_sys_dark_on_surface"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
 
         <ru.partyshaker.partyshaker.ui.components.CustomOutlineTextInput
             android:id="@+id/email"
@@ -33,16 +42,35 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:hintText="@string/email"
-            app:inputType="email" />
+            app:inputType="email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info" />
+
+        <TextView
+            android:id="@+id/responseError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/material_theme_sys_dark_error"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email"
+            tools:text="Аккаунт не существует, проверьте данные"
+            tools:visibility="visible" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/nav_pass_restore_second_step"
             style="@style/FilledPrimeButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/auth_pass_recovery_first_step_apply_button"
+            android:layout_marginTop="20dp"
+            android:text="@string/pass_recovery_first_step_apply_button"
             android:textAllCaps="false"
-            android:textSize="14sp" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/responseError" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

@@ -1,4 +1,4 @@
-package ru.partyshaker.partyshaker.ui.features.login.domain
+package ru.partyshaker.partyshaker.data
 
 import android.content.SharedPreferences
 import javax.inject.Inject

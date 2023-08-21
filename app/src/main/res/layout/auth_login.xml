@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:backgroundTint="@color/material_theme_sys_dark_surface_container_low"
     app:cardCornerRadius="28dp">
 
@@ -16,7 +16,7 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/auth_login_title"
+            android:text="@string/title_login"
             android:textColor="@color/material_theme_sys_dark_on_surface"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -46,15 +46,16 @@
             app:layout_constraintTop_toBottomOf="@id/email" />
 
         <TextView
-            android:id="@+id/error"
+            android:id="@+id/responseError"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/email_or_password_error"
             android:textColor="@color/material_theme_sys_dark_error"
-            android:visibility="visible"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/pass"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pass"
+            tools:text="Аккаунт не существует, проверьте данные"
             tools:visibility="visible" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -65,12 +66,12 @@
             android:gravity="center_vertical"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/error">
+            app:layout_constraintTop_toBottomOf="@+id/responseError">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/forgot_password"
+                android:text="@string/password_restore_label"
                 android:textColor="@color/material_theme_sys_dark_on_surface"
                 android:textSize="12sp"
                 app:layout_constraintRight_toLeftOf="@id/nav_restore_pass_first_step"
@@ -87,12 +88,12 @@
                 android:layout_height="wrap_content"
                 android:minHeight="0dp"
                 android:padding="0dp"
-                android:text="@string/restore_password"
+                android:text="@string/password_restore_button"
                 android:textAllCaps="false"
                 android:textColor="@color/material_theme_sys_dark_primary"
                 android:textSize="14sp"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/error" />
+                app:layout_constraintTop_toBottomOf="@id/pass" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.AppCompatButton
@@ -101,7 +102,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/login"
+            android:text="@string/auth_login_apply_button"
             android:textAllCaps="false"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"

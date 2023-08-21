@@ -5,24 +5,22 @@
     android:layout_height="match_parent">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textField"
+        android:id="@+id/textInput"
         style="@style/CustomOutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/label"
         app:endIconDrawable="@drawable/ic_cross"
         app:endIconMode="clear_text"
-        app:errorEnabled="false"
         app:errorIconDrawable="@drawable/ic_exclamation"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/TextInputLayoutAppearance"
         app:startIconDrawable="@drawable/ic_search">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etInput"
+            android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLength="35"
             android:maxLines="1"
             android:textColor="@color/material_theme_sys_dark_on_surface" />
     </com.google.android.material.textfield.TextInputLayout>

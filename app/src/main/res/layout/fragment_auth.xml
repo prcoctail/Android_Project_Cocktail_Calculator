@@ -26,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="32dp"
-                android:contentDescription="@string/auth_logo"
+                android:contentDescription="@string/logo"
                 android:src="@drawable/img_logo" />
         </com.google.android.material.card.MaterialCardView>
 
