@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginTop="20dp"
+    android:backgroundTint="@color/material_theme_sys_dark_surface_container_low"
+    app:cardCornerRadius="28dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pass_recovery_third_step_title"
+            android:textColor="@color/material_theme_sys_dark_on_surface"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/pass_recovery_third_step_label"
+            android:textColor="@color/material_theme_sys_dark_on_surface"
+            android:textSize="16sp" />
+
+        <ru.partyshaker.partyshaker.ui.components.CustomOutlineTextInput
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:hintText="@string/password_updated"
+            app:inputType="password" />
+
+        <ru.partyshaker.partyshaker.ui.components.CustomOutlineTextInput
+            android:id="@+id/pass_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:hintText="@string/password_repeated"
+            app:inputType="password" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nav_auth"
+            style="@style/FilledPrimeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/pass_recovery_first_step_apply_button"
+            android:textAllCaps="false"
+            android:textSize="14sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="auth_email_min_length">6</integer>
+    <integer name="auth_email_max_length">100</integer>
+
+    <integer name="auth_password_min_length">8</integer>
+    <integer name="auth_password_max_length">150</integer>
+
+    <!-- Bet 1000 units more for a correct countdown! -->
+    <integer name="auth_restore_resend_link_timer">61000</integer>
+
+    <integer name="auth_input_filed_check_delay">1000</integer>
+</resources>

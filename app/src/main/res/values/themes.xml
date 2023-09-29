@@ -21,7 +21,7 @@
         <item name="cornerSize">12dp</item>
     </style>
 
-    <style name="MyOutlinedBox" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+    <style name="CustomOutlinedBox" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="boxStrokeColor">@color/material_theme_sys_dark_primary</item>
         <item name="hintTextColor">@color/material_theme_sys_dark_primary</item>
         <item name="startIconTint">@color/material_theme_sys_dark_on_surface_variant</item>

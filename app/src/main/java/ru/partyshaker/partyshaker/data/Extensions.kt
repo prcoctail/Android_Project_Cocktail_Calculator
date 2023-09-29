@@ -29,7 +29,11 @@ fun <T> Response<T>.result() =
 
 data class ErrorT(val message: String?, val code: Int = -1)
 
-val emptyError: ErrorT by lazy { ErrorT("") }
+val emptyError: ErrorT by lazy {
+    ErrorT(
+        ""
+    )
+}
 
 sealed class ResultT<T>(
     val isSuccess: Boolean,

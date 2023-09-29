@@ -1,6 +1,7 @@
 package ru.partyshaker.partyshaker.ui
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.NavController
@@ -41,6 +42,22 @@ class MainActivity : AppCompatActivity() {
         toolbar = binding.toolbar
         setSupportActionBar(toolbar)
         toolbar.setupWithNavController(navController, appBarConfiguration)
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            with(destination) {
+                if (id == R.id.authorizationFragment
+                    || id == R.id.cocktailsFilterFragment
+                    || id == R.id.authAccActivationFragment
+                    || id == R.id.passRecoveryFirstStepFragment
+                    || id == R.id.passRecoverySecondStepFragment
+                    || id == R.id.passRecoveryThirdStepFragment
+                ) {
+                    bottomNavigation.visibility = View.GONE
+                } else {
+                    bottomNavigation.visibility = View.VISIBLE
+                }
+            }
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {

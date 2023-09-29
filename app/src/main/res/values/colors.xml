@@ -12,6 +12,7 @@
     <color name="material_theme_sys_dark_secondary_container">#3F4759</color>
     <color name="material_theme_sys_dark_outline">#8E9099</color>
     <color name="material_theme_sys_dark_error">#FFB4AB</color>
+    <color name="material_theme_sys_dark_success">#4BB543</color>
 
     <color name="material_theme_sys_dark_on_primary">#002E6A</color>
     <color name="material_theme_sys_dark_on_secondary">#293041</color>

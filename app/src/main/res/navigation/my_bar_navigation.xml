@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/myBarFragment"
-        android:name="ru.partyshaker.partyshaker.ui.features.my_bar.ui.MyBarFragment"
+        android:name="ru.partyshaker.partyshaker.ui.features.my_bar.MyBarFragment"
         android:label="@string/title_my_bar"
         tools:layout="@layout/fragment_my_bar" />
 </navigation>

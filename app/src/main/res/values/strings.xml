@@ -1,34 +1,20 @@
 <resources>
     <string name="app_name">PartyShaker</string>
-    <string name="login">Войти</string>
-    <string name="forgot_password">Забыли пароль?</string>
-    <string name="restore_password">Восстановить</string>
-    <string name="email_or_password_error">Аккаунт или пароль введены неверно</string>
-    <string name="password">Пароль</string>
-    <string name="email">Электронная почта</string>
-    <string name="register">Регистрация</string>
-    <string name="nickname">Ваш никнейм</string>
-    <string name="repeat_password">Повторите пароль</string>
-    <string name="account_exists_error">Такой пароль аккаунт уже есть в системе</string>
-    <string name="privacy_policy_label">Мне исполнилось 18 лет и я согласен с Политикой конфидециальности</string>
-    <string name="sign_up">Зарегистрироваться</string>
-    <string name="privacy_policy">Политикой конфидециальности</string>
-    <string name="authorize">Вход</string>
     <string name="label">Label</string>
     <string name="fragment_not_found_text">Position Not Found</string>
     <string name="default_hint_text">Label</string>
-    <string name="empty_password_error_text">Введите пароль</string>
-    <string name="password_length_error_text">Ваш пароль должен содержать не менее 8-ми символов</string>
-    <string name="empty_email_error_text">Введите адрес электронной почты</string>
-    <string name="wrong_email_format_text">Неправельный формат электронной почты</string>
 
-    <!-- Titles -->
+    <!-- Navigation titles -->
     <string name="title_cocktails">Коктейли</string>
     <string name="title_cocktail">Коктейль</string>
     <string name="title_ingredients">Ингредиенты</string>
     <string name="title_my_bar">Мой бар</string>
     <string name="title_cocktails_filter">Фильтры</string>
     <string name="title_auth">Аутентификация</string>
+    <string name="title_pass_recovery">Восстановление пароля</string>
+    <string name="title_acc_activation">Активация аккаунта</string>
+    <string name="title_login">Вход</string>
+    <string name="title_register">Регистрация</string>
 
     <!-- Cocktails filter categories -->
     <string name="complexities">Сложность</string>
@@ -62,4 +48,73 @@
     <!-- Cocktail card titles -->
     <string name="cocktail_card_ingredients_servings_title">Количество порций</string>
     <string name="cocktails_card_cooking_steps_title">Приготовление</string>
+
+    <!-- My bar -->
+    <string name="my_bar_auth_hint">Зарегистрируйтесь или авторизуйтесь, чтобы создавать свои уникальные коктейли</string>
+    <string name="my_bar_auth_navigate_button">Вход или регистрация</string>
+
+    <!-- Auth -->
+    <string name="logo">auth_logo</string>
+    <string name="email">Электронная почта</string>
+    <string name="email_suffix">.ru</string>
+    <string name="password">Пароль</string>
+    <string name="password_repeated">Повторите пароль</string>
+    <string name="password_updated">Новый пароль</string>
+    <string name="password_restore_label">Забыли пароль?</string>
+    <string name="password_restore_button">Восстановить</string>
+
+    <!-- Auth email field errors -->
+    <string name="field_email_wrong_length">Минимальная длина — 6 символов</string>
+    <string name="field_email_wrong_format">Используйте формат name@domain.ru</string>
+
+    <!-- Auth pass field errors -->
+    <string name="auth_pass_wrong_symbols">Недопустимые символы: %1$s</string>
+    <string name="field_pass_wrong_length">Минимальная длина — 8 символов</string>
+    <string name="field_pass_missing_letters">Отсутствуют буквы</string>
+    <string name="field_pass_missing_numbers">Отсутствуют цифры</string>
+    <string name="field_pass_missing_signs">Отсутствуют знаки</string>
+    <string name="field_pass_missing_upper_case">Отсутствует заглавная буква</string>
+    <string name="field_pass_missing_lower_case">Отсутствует строчная буква</string>
+
+    <!-- Auth re pass field errors -->
+    <string name="auth_register_re_password_wrong_match">Повторный пароль не совпадает</string>
+
+    <!-- Auth register -->
+    <string name="privacy_policy_label">Мне исполнилось 18 лет, и я соглашаюсь с <a href="https://partyshaker.online/">политикой конфиденциальности</a></string>
+    <string name="register_apply_button">Зарегистрироваться</string>
+
+    <!-- Auth login -->
+    <string name="auth_login_apply_button">Войти</string>
+
+    <!-- Auth register errors -->
+    <string name="auth_register_email_exists_error">Эта почта уже используется</string>
+    <string name="auth_register_agreement_missing_error">Вам должно быть 18 лет. Необходимо согласие с политикой</string>
+    <string name="auth_register_format_error">Данные не прошли проверку. Соблюдайте формат почты и пароля</string>
+    <string name="auth_register_email_missing_error">Введите почту</string>
+    <string name="auth_register_pass_missing_error">Введите пароль</string>
+    <string name="auth_register_re_pass_missing_error">Повторите пароль</string>
+
+    <!-- Auth acc activation -->
+    <string name="acc_title">Проверьте почту</string>
+    <string name="acc_email_sent_label">Перейдите по ссылке, отправленной на почту %1$s.</string>
+    <string name="acc_common_label">Если письма долго нет, проверьте раздел спама.</string>
+    <string name="acc_resend_button">Отправить письмо повторно</string>
+    <string name="acc_apply_button">Перейти к авторизации</string>
+    <!-- <string name="acc_apply_button">Проверить статус</string> -->
+
+    <!-- Auth pass recovery first step -->
+    <string name="pass_recovery_first_step_title">Шаг 1 из 3</string>
+    <string name="pass_recovery_first_step_label">Получите ссылку на восстановление пароля по этой почте</string>
+    <string name="pass_recovery_first_step_apply_button">Восстановить</string>
+
+    <!-- Auth pass recovery second step -->
+    <string name="pass_recovery_second_step_title">Шаг 2 из 3</string>
+    <string name="pass_recovery_second_step_email_sent_label">Перейдите по ссылке, отправленной на почту %1$s.</string>
+    <string name="pass_recovery_second_step_resend_button">Отправить письмо повторно</string>
+    <string name="pass_recovery_apply_button">Перейти к авторизации</string>
+
+    <!-- Auth pass recovery third step -->
+    <string name="pass_recovery_third_step_title">Шаг 3 из 3</string>
+    <string name="pass_recovery_third_step_label">Введите новый пароль</string>
+    <string name="pass_recovery_third_step_apply_button">Обновить пароль</string>
 </resources>
